@@ -1,0 +1,1707 @@
+# ===========================================================================
+# Configuración del Bot fluxo
+# Si encuentras algún problema, necesitas soporte, o tienes una sugerencia para el bot,
+# únete a nuestro servidor de soporte y crea un ticket:
+# http://discord.fluxodevelopment.net
+
+# INFORMACIÓN DEL BOT
+Version: "1.8.0" # ¡No cambies esto!
+BotToken: "MTQ4OTUwNDkwNzU5NjY2NDk0Mw.GTd5lV.VkgPyx53Nm1y2Lrt5mblFzSrpcijo6Z_dJ68EQ" # TOKEN DEL BOT - Si necesitas ayuda para obtener tu BotToken abre un ticket aquí: http://discord.fluxodevelopment.net
+mongoURI: "mongodb+srv://sadbenitez141_db_user:mariposi12@cluster0.o5dhwfo.mongodb.net/?appName=Cluster0"
+GuildID: "1461219125362688002" # Este es el ID de tu servidor. Haz clic derecho en el ícono de tu servidor y copia el ID
+BotName: "fluxo Bot"
+LogCommands: false # ¿Registrar comandos usados en la consola?
+Statistics: true # ¿Mostrar estadísticas en la terminal cuando el bot inicia? (Esto no afecta el comando de estadísticas ni nada más)
+Timezone: "America/New_York" # Usa https://gist.github.com/diogocapela/12c6617fc87607d11fd62d2a4f42b02a
+
+EmbedColors: "#1769FF" # Color principal de los embeds
+SuccessEmbedColor: "#2ecc71" # Color de embeds de éxito
+ErrorEmbedColor: "#E74C3C" # Color de embeds de error
+
+# Ejecuta npx --no discord-player-youtubei en tu consola
+# ¡ASEGÚRATE DE USAR UNA CUENTA DESECHABLE MAYOR DE 18 AÑOS YA QUE PUEDE SER BANEADA!
+YouTubeKey: "" # No es obligatorio pero mejorará la fiabilidad
+Player: "iOS" # No cambies esto a menos que sea necesario. - 'WEB' | 'iOS' | 'ANDROID' | 'YTMUSIC_ANDROID' | 'YTMUSIC' | 'YTSTUDIO_ANDROID' | 'TV_EMBEDDED' | 'YTKIDS'
+
+# Ejemplo (Asegúrate de copiar la cadena de inicio de sesión completa que genera)
+# access_token=tokenmuylargo; scope=https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube-paid-content; token_type=Bearer; expiry_date=2024-08-12T09:01:59.019Z
+
+Dashboard:
+  Enabled: false # ¿Activar el panel web?
+  ClientID: "CLIENT_ID" # ID de cliente
+  ClientSecret: "CLIENT_SECRET" # Secreto de cliente
+  CallbackURL: "http://IP:PUERTO/auth/discord/callback" # Reemplaza IP:PUERTO
+  Port: 3000 # Puerto del panel web
+
+# ===========================================================================
+# REGISTROS DE EVENTOS
+# ===========================================================================
+# Registros de Usuarios
+UserUpdateLogs:
+  Enabled: false # ¿Registrar cuando un usuario actualiza su perfil?
+  LogsChannelID: "CHANNEL_ID" # ID del canal de registros
+
+RoleAddLogs:
+  Enabled: false # ¿Registrar cuando se añade un rol a un usuario?
+  LogsChannelID: "CHANNEL_ID"
+
+RoleRemoveLogs:
+  Enabled: false # ¿Registrar cuando se quita un rol a un usuario?
+  LogsChannelID: "CHANNEL_ID"
+
+# Registros del Servidor
+GuildUpdateLogs:
+  Enabled: false # ¿Registrar cuando el servidor es modificado?
+  LogsChannelID: "CHANNEL_ID"
+
+ChannelCreatedLogs:
+  Enabled: false # ¿Registrar cuando se crea un canal?
+  LogsChannelID: "CHANNEL_ID"
+
+ChannelDeletedLogs:
+  Enabled: false # ¿Registrar cuando se elimina un canal?
+  LogsChannelID: "CHANNEL_ID"
+
+# Registros de Mensajes
+MessageDeleteLogs:
+  Enabled: false # ¿Registrar mensajes eliminados?
+  LogsChannelID: "CHANNEL_ID"
+  LogImages: true # ¿También registrar imágenes eliminadas?
+
+MessageUpdateLogs:
+  Enabled: false # ¿Registrar mensajes editados?
+  LogsChannelID: "CHANNEL_ID"
+
+# Registros de Voz
+VoiceChannelStreamStart:
+  Enabled: false # ¿Registrar cuando alguien inicia un stream?
+  LogsChannelID: "CHANNEL_ID"
+
+VoiceChannelStreamStop:
+  Enabled: false # ¿Registrar cuando alguien termina un stream?
+  LogsChannelID: "CHANNEL_ID"
+
+VoiceChannelJoin:
+  Enabled: false # ¿Registrar cuando alguien entra a un canal de voz?
+  LogsChannelID: "CHANNEL_ID"
+
+VoiceChannelLeave:
+  Enabled: false # ¿Registrar cuando alguien sale de un canal de voz?
+  LogsChannelID: "CHANNEL_ID"
+
+VoiceChannelSwitch:
+  Enabled: false # ¿Registrar cuando alguien cambia de canal de voz?
+  LogsChannelID: "CHANNEL_ID"
+
+# Registros de Moderación
+TimeoutLogs:
+  Enabled: false # ¿Registrar silencios (timeouts)?
+  LogsChannelID: "CHANNEL_ID"
+
+UntimeLogs:
+  Enabled: false # ¿Registrar cuando se quita un silencio?
+  LogsChannelID: "CHANNEL_ID"
+
+WarnLogs:
+  Enabled: false # ¿Registrar advertencias?
+  LogsChannelID: "CHANNEL_ID"
+
+BanLogs:
+  Enabled: false # ¿Registrar baneos?
+  DM:
+    Enabled: false # ¿Enviar mensaje directo al usuario baneado?
+    Embed:
+      Title: "🚫 Notificación de Baneo"
+      Description:
+        - "**🏰 Servidor:** {guildName}"
+        - "**🔨 Baneado por:** {moderator}"
+        - "**📝 Razón:** {reason}"
+        - "**📅 Fecha:** {longtime}, {shorttime}"
+        - " "
+        - "🚷 Has sido baneado del servidor."
+      Footer: "🔒 Acción de Moderación | fluxoBot"
+      Color: "#1769FF"
+  LogsChannelID: "CHANNEL_ID"
+  Embed:
+    Title: "🔨 Acción de Baneo | Usuario: {userTag}"
+    Description:
+      - "**👤 Usuario:** {user}"
+      - "**🛠️ Moderador:** {moderator}"
+      - "**📝 Razón:** {reason}"
+      - "**📅 Fecha:** {longtime}, {shorttime}"
+      - " "
+      - "El baneo ha sido completado."
+    Footer: "🔒 Acción de Moderación | fluxoBot"
+    Color: "#1769FF"
+  Thumbnail: true
+
+UnbanLogs:
+  Enabled: false # ¿Registrar desbaneos?
+  LogsChannelID: "CHANNEL_ID"
+  Embed:
+    Title: "🔓 Acción de Desbaneo | Usuario: {userTag}"
+    Description:
+      - "**👤 Usuario:** {user}"
+      - "**🛠️ Moderador:** {moderator}"
+      - "**📝 Razón del Desbaneo:** {reason}"
+      - "**📅 Fecha:** {longtime}, {shorttime}"
+      - " "
+      - "El baneo del usuario ha sido levantado, restaurando su acceso al servidor."
+    Footer: "🔒 Acción de Moderación | fluxoBot"
+    Color: "#1769FF"
+  Thumbnail: true
+
+KickLogs:
+  Enabled: false # ¿Registrar expulsiones (kicks)?
+  DM:
+    Enabled: true # ¿Enviar mensaje directo al usuario expulsado?
+    Embed:
+      Title: ":boot: Notificación de Expulsión"
+      Description:
+        - "**👤 Usuario:** {user}"
+        - "**🛠️ Expulsado por:** {moderator}"
+        - "**📝 Razón:** {reason}"
+        - "**📅 Fecha:** {longTime}, {shortTime}"
+      Footer: "🔒 Acción de Moderación | fluxoBot"
+      Color: "#1769FF"
+  LogsChannelID: "CHANNEL_ID"
+  Embed:
+    Title: ":warning: Usuario Expulsado | Caso #{caseNumber}"
+    Description:
+      - "**👤 Usuario:** {user} (ID: {userId})"
+      - "**🔧 Moderador:** {moderator}"
+      - "**📝 Razón:** {reason}"
+      - "**📅 Fecha:** {longTime}, {shortTime}"
+    Footer: "🔒 Acción de Moderación | fluxoBot"
+    Color: "#1769FF"
+    Thumbnail: true
+
+# Registros Varios
+GiveawayLogs:
+  Enabled: false # ¿Registrar sorteos?
+  LogsChannelID: "CHANNEL_ID"
+
+  GiveawayStarted:
+    Embed:
+      Title: ":tada: Sorteo Iniciado :tada:"
+      Description:
+        - "**🎁 Premio:** `{prize}` x{winnerCount}"
+        - "**👤 Organizado por:** {hostedBy}"
+        - "**📢 Canal:** {channel}"
+        - "**🏆 Cantidad de Ganadores:** `{winnerCount}`"
+        - "**⏰ Termina en:** {endsIn}"
+      Footer: "🔒 Registro de Sorteo | fluxoBot"
+      Color: "#1769FF"
+      ThumbnailUrl: "https://i.imgur.com/ewT6bOT.png"
+      Thumbnail: true
+
+  GiveawayEnded:
+    Embed:
+      Title: ":tada: Sorteo Terminado :tada:"
+      Description:
+        - "**🎁 Premio:** `{prize}` x{winnerCount}"
+        - "**👤 Organizado por:** {hostedBy}"
+        - "**📢 Canal:** {channel}"
+        - "**🏆 Cantidad de Ganadores:** `{winnerCount}`"
+        - "**🏆 Ganadores:** {winners}"
+      Footer: "🔒 Registro de Sorteo | fluxoBot"
+      Color: "#1769FF"
+      ThumbnailUrl: "https://i.imgur.com/ewT6bOT.png"
+      Thumbnail: true
+
+  GiveawayRerolled:
+    Embed:
+      Title: ":tada: Sorteo Repetido :tada:"
+      Description:
+        - "**🎁 Premio:** `{prize}` x{winnerCount}"
+        - "**👤 Organizado por:** {hostedBy}"
+        - "**📢 Canal:** {channel}"
+        - "**🏆 Cantidad de Ganadores:** `{winnerCount}`"
+        - "**🏆 Nuevos Ganadores:** {winners}"
+      Footer: "🔒 Registro de Sorteo | fluxoBot"
+      Color: "#1769FF"
+      ThumbnailUrl: "https://i.imgur.com/ewT6bOT.png"
+      Thumbnail: true
+
+
+# ===========================================================================
+# SISTEMA DE TICKETS
+# ===========================================================================
+TicketSettings:
+  Enabled: true # ¿Activar sistema de tickets?
+  LogsChannelID: "CHANNEL_ID" # El registro no se enviará si está vacío ""
+  MaxTickets: 1 # Máximo de tickets por usuario
+  DeletionTime: "5" # En segundos, pon 0 para eliminar instantáneamente
+  useSelectMenu: false # ¿Usar menú desplegable en vez de botones?
+
+Priority:
+  Enabled: true # ¿Activar sistema de prioridades?
+  DefaultPriority: "Low" # Prioridad por defecto
+
+  Levels:
+    Low: # Prioridad Baja
+      Roles: ["ROLE_ID", "ROLE_ID"] # Roles con esta prioridad
+      Tag: ["ROLE_ID", "ROLE_ID"] # Roles a etiquetar cuando se abre un ticket con esta prioridad
+      MoveTop: false # ¿Mover el ticket al tope de la categoría?
+
+    Medium: # Prioridad Media
+      Roles: ["ROLE_ID", "ROLE_ID"] # Roles con esta prioridad
+      Tag: ["ROLE_ID", "ROLE_ID"] # Roles a etiquetar cuando se abre un ticket con esta prioridad
+      MoveTop: true # ¿Mover el ticket al tope de la categoría?
+
+    High: # Prioridad Alta
+      Roles: ["ROLE_ID", "ROLE_ID"] # Roles con esta prioridad
+      Tag: ["ROLE_ID", "ROLE_ID"] # Roles a etiquetar cuando se abre un ticket con esta prioridad
+      MoveTop: true # ¿Mover el ticket al tope de la categoría?
+
+WorkingHours:
+  Enabled: false # ¿Activar horario de atención?
+  Timezone: "Europe/London" # https://gist.github.com/diogocapela/12c6617fc87607d11fd62d2a4f42b02a
+  Schedule: # Horario de atención
+    Monday: "16:00-22:00" # Lunes
+    Tuesday: "16:00-22:00" # Martes
+    Wednesday: "16:00-22:00" # Miércoles
+    Thursday: "16:00-22:00" # Jueves
+    Friday: "16:00-22:00" # Viernes
+    Saturday: "16:00-22:00" # Sábado
+    Sunday: "16:00-22:00" # Domingo
+  allowOpenTickets: true # ¿Permitir abrir tickets fuera del horario de atención?
+
+WorkingEmbed: # Este mensaje se publicará en el ticket si se abre fuera de horario
+  Embed:
+    Title: "Aviso de Ticket de Soporte"
+    Description:
+      - "Ten en cuenta que este ticket fue creado fuera del horario de atención."
+      - "Nuestra respuesta puede tardar más de lo normal."
+      - " "
+      - "Nuestro horario de atención es entre {workinghours_start} y {workinghours_end}."
+    Footer:
+      Text: "fluxo Development | Sistema de Tickets"
+      Icon: "https://i.imgur.com/1oVwqr7.png"
+    Author:
+      Text: "Soporte fluxo Development"
+      Icon: "https://i.imgur.com/1oVwqr7.png"
+    Color: "#1769FF"
+    Image: "https://images-ext-1.discordapp.net/external/OllWGq5ta58LX6KoA8yEVTMrI9L4BJ0iE_T0pE4TZvw/https/i.imgur.com/LbjDuZ8.png?format=webp&quality=lossless&width=1618&height=403"
+    Thumbnail: ""
+
+TicketPanelSettings:
+  Panel1:
+    Embed:
+      Title: "📩 Tickets de Soporte"
+      Description:
+        - "Por favor selecciona una categoría abajo para recibir asistencia."
+        - " "
+        - "🕒 **Horario de Atención Estándar**: {workinghours_start_monday} - {workinghours_end_monday}"
+        - "_Nota: Nos esforzamos por estar disponibles fuera de este horario, pero los tiempos de respuesta pueden variar._"
+      embedFields:
+      - name: ""
+        value: ""
+        inline: true
+      - name: ""
+        value: ""
+        inline: true
+      - name: ""
+        value: ""
+        inline: true
+      Footer:
+        Text: "fluxo Development | Sistema de Tickets"
+        Icon: "https://i.imgur.com/1oVwqr7.png"
+      Author:
+        Text: "Equipo de Soporte fluxo"
+        Icon: "https://i.imgur.com/1oVwqr7.png"
+      Color: "#1769FF"
+      Image: "https://i.imgur.com/1FGL7XO.png"
+      Thumbnail: ""
+
+  Panel2:
+    Embed:
+      Title: "Tickets de Soporte"
+      Description:
+        - "> ¡Si necesitas ayuda haz clic en el botón de abajo!"
+        - "> ¡Nuestro equipo estará contigo en breve!"
+      Footer:
+        Text: "fluxo Development | Sistema de Tickets"
+        Icon: "https://i.imgur.com/1oVwqr7.png"
+      Author:
+        Text: ""
+        Icon: ""
+      Color: "#1769FF"
+      Image: "https://images-ext-1.discordapp.net/external/OllWGq5ta58LX6KoA8yEVTMrI9L4BJ0iE_T0pE4TZvw/https/i.imgur.com/LbjDuZ8.png?format=webp&quality=lossless&width=1618&height=403"
+      Thumbnail: ""
+
+TicketTranscript:
+  Type: "TXT" # TXT o WEB
+  Save: true # ¿Guardar transcripciones?
+  MinMessages: "1" # Mínimo de mensajes para guardar transcripción
+  ArchiveChannelID: "CHANNEL_ID" # Canal donde se guardan las transcripciones
+  SavePath: "./transcripts/" # Ruta donde se guardan las transcripciones
+
+# {ticketType} muestra el tipo de ticket
+# {user} es @Juan García
+# {guild} muestra el servidor
+TicketCreation:
+  Followup:
+    Message: "¡Gracias {user} por contactarnos! Por favor describe tu problema."
+  Embed:
+    Title: "Ticket de Soporte | {ticketType}"
+    Description:
+      - "> Por favor describe tu problema y nuestro equipo de soporte"
+      - "> se pondrá en contacto contigo en breve."
+    Footer:
+      Text: "fluxo Development | Sistema de Tickets"
+      Icon: "https://i.imgur.com/1oVwqr7.png"
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#1769FF"
+    Image: "https://images-ext-1.discordapp.net/external/OllWGq5ta58LX6KoA8yEVTMrI9L4BJ0iE_T0pE4TZvw/https/i.imgur.com/LbjDuZ8.png?format=webp&quality=lossless&width=1618&height=403"
+    Thumbnail: ""
+
+QuestionDesign:
+  Embed:
+    Title: "Preguntas y Respuestas - {ticketType}" # {ticketType} es el nombre de la opción de ticket
+    Description:
+      - "**{question}**"
+      - "```{answer}```"
+    Footer:
+      Text: "fluxo Development | Sistema de Tickets"
+      Icon: "https://i.imgur.com/1oVwqr7.png"
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#1769FF"
+    Image: ""
+    Thumbnail: ""
+
+# LEE EL WIKI - https://docs.fluxodevelopment.net/fluxo-bot/ticket-system/smart-responses
+SmartResponses:
+  Enabled: false # ¿Activar respuestas automáticas inteligentes?
+
+  Phrases:
+    MongoSetup:
+      Phrase:
+        - "How do I setup Mongo" # Cómo configuro Mongo
+        - "How can I configure MongoDB" # Cómo puedo configurar MongoDB
+        - "How do I go about setting up MongoDB" # Cómo configuro MongoDB
+        - "How do I setup mongo for fluxo bot" # Cómo configuro mongo para fluxo bot
+      MatchPercent: 0.95 # Porcentaje de coincidencia necesario
+      Type: "TEXT"
+      Response: "Por favor consulta esta guía para configurar MongoDB: https://docs.fluxodevelopment.net/misc/mongodb-setup"
+      AdvancedAnalysis:
+        SynonymThreshold: 0.72 # Umbral de sinónimos
+        ContextualAnalysis: true # ¿Análisis contextual?
+
+ArchiveDesign:
+  Embed:
+    Title: "Ticket Cerrado"
+    Description:
+      - "{userTag}, tu ticket ha sido cerrado."
+      - "Por favor elimina tu ticket o reabre si aún necesitas soporte."
+    Footer:
+      Text: "fluxo Development | Sistema de Tickets"
+      Icon: "https://i.imgur.com/1oVwqr7.png"
+    Color: "#1769FF"
+    Image: ""
+    Thumbnail: ""
+    Buttons: # TIPOS: REOPEN (Reabrir), TRANSCRIPT (Transcripción), DELETE (Eliminar)
+      1:
+        Name: "Reabrir Ticket"
+        Emoji: "📥"
+        Style: "Primary" # Primary, Secondary, Success, Danger
+        Type: "REOPEN"
+      2:
+        Name: "Transcripción"
+        Emoji: "📖"
+        Style: "Primary"
+        Type: "TRANSCRIPT"
+      3:
+        Name: "Eliminar"
+        Emoji: "📖"
+        Style: "Danger"
+        Type: "DELETE"
+
+UserLeftDesign:
+  Embed:
+    Title: "Alerta de Usuario"
+    Description:
+      - "El creador de este ticket, **{user}** ha abandonado el servidor."
+    Footer:
+      Text: "ID de Usuario: {userId}"
+      Icon: "{userIcon}"
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#1769FF"
+    Image: ""
+    Thumbnail: "{userIcon}"
+  Button:
+    Name: "Eliminar Ticket"
+    Emoji: "⛔"
+    Style: "Secondary"
+
+TicketTypes:
+  TicketType1:
+    Enabled: true # ¿Activar este tipo de ticket?
+    Panel: "Panel1" # ¿A qué panel se asigna este tipo?
+    Name: "Soporte General"
+    ChannelName: "{ticket-id}-General-{user}-{priority}" # Nombre del canal del ticket
+    ChannelTopic: "{userid}-{priority}" # Tema del canal
+    CategoryID: "" # ID de la categoría donde se crean los tickets
+    ArchiveCategory: "" # Dejar vacío para eliminar en vez de archivar
+    SupportRole: ["ROLE_ID", "ROLE_ID"] # Roles de soporte que pueden ver el ticket
+    UserRole: [""] # [""] para permitir a todos
+    TagSupport: true # ¿Etiquetar al equipo de soporte?
+    TagCreator: true # ¿Etiquetar al creador del ticket?
+    RestrictDeletion: false # ¿Pueden los usuarios cerrar su propio ticket?
+    Button:
+      Name: "Soporte General"
+      Emoji: "🔍"
+      Style: "Danger"
+      Description: "Abre para recibir soporte general"
+    Questions:
+      - PurchaseID:
+          Question: "¿Tienes un ID de transacción?"
+          Placeholder: "TBX-wdUGVApxKSMXham"
+          Style: "Short" # Short = corto, Paragraph = párrafo
+          Required: false # ¿Es obligatorio?
+          maxLength: 1000
+
+  TicketType2:
+    Enabled: true
+    Panel: "Panel1"
+    Name: "Compras"
+    ChannelName: "{ticket-id}-Compra-{user}-{priority}"
+    ChannelTopic: "{userid}-{priority}"
+    CategoryID: ""
+    ArchiveCategory: ""
+    SupportRole: ["ROLE_ID", "ROLE_ID"]
+    UserRole: [""]
+    TagSupport: true
+    TagCreator: true
+    RestrictDeletion: true # ¿Pueden los usuarios cerrar su propio ticket? (No en este caso)
+    Button:
+      Name: "Soporte de Compras"
+      Emoji: "💸"
+      Style: "Primary"
+      Description: "Preguntas y problemas de compras"
+    Questions:
+      - IGN:
+          Question: "¿Cuál es tu nombre en el juego (IGN)?"
+          Placeholder: "YouSeeMeRunning"
+          Style: "Short"
+          Required: true # ¿Es obligatorio?
+          maxLength: 1000
+      - PurchaseID:
+          Question: "¿Tienes un ID de transacción?"
+          Placeholder: "TBX-wdUGVApxKSMXham"
+          Style: "Short"
+          Required: false
+          maxLength: 1000
+
+          # AGREGA MÁS ABAJO
+
+Alert:
+  Enabled: true # ¿Activar alerta de inactividad?
+  Time: "12h" # Tiempo de inactividad antes de alertar
+  Embed:
+    Title: "Alerta de Ticket"
+    Description:
+      - "{user}, tu ticket será cerrado {time}."
+      - "¡Por favor responde para mantener el ticket abierto!"
+    Footer:
+      Text: "fluxo Development | Sistema de Tickets"
+      Icon: "https://i.imgur.com/1oVwqr7.png"
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#1769FF"
+    Image: ""
+    Thumbnail: ""
+
+TicketClosureDM:
+  Enabled: true # ¿Enviar DM al cerrar el ticket?
+  Transcript: true # ¿Incluir transcripción en el DM?
+  Embed:
+    Title: "Notificación de Cierre de Ticket"
+    Description:
+      - "{userTag}, tu ticket en {guild} ha sido cerrado."
+      - " "
+      - "**Resumen del Ticket**"
+      - "> **Mensajes:** {messageCount}"
+      - "> **Prioridad:** {priority}"
+      - " "
+      - "¡Valoramos tu opinión! Por favor déjanos una reseña abajo."
+    Footer:
+      Text: "fluxo Development | Sistema de Tickets"
+      Icon: "https://i.imgur.com/1oVwqr7.png"
+    Author:
+      Text: "Soporte fluxo"
+      Icon: "https://i.imgur.com/1oVwqr7.png"
+    Color: "#1769FF"
+    Image: "https://images-ext-1.discordapp.net/external/OllWGq5ta58LX6KoA8yEVTMrI9L4BJ0iE_T0pE4TZvw/https/i.imgur.com/LbjDuZ8.png?format=webp&quality=lossless&width=1618&height=403"
+    Thumbnail: "https://i.imgur.com/1oVwqr7.png"
+
+Reviews:
+  Enabled: true # ¿Activar sistema de reseñas?
+  Emoji: "⭐"
+  Placeholder: "¡Calificanos!"
+  Text: "Estrellas"
+  askWhy: true # ¿Preguntar al usuario el motivo de su calificación?
+
+Logs:
+  Close:
+    Embed:
+      Title: "**Cierre de Ticket**"
+      Description:
+        - "**Cierre**"
+        - "> El ticket fue cerrado por {userTag}."
+        - " "
+        - "**Información**"
+        - "> **Creador:** {ticketCreator}"
+        - "> **Mensajes:** {messageCount}"
+        - "> **Prioridad:** {priority}"
+        - " "
+        - "**Canal del Ticket**"
+        - "> {channelName}"
+        - " "
+        - "**Reseña**"
+        - "> **Calificación:** {rating}" # Dirá "Sin calificación aún" si no ha sido reseñado
+      Footer:
+        Text: "fluxo Development | Sistema de Tickets"
+        Icon: "https://i.imgur.com/1oVwqr7.png"
+      Author:
+        Text: "Sistema de Tickets"
+        Icon: "https://i.imgur.com/1oVwqr7.png"
+      Color: "#1769FF"
+      Image: "https://images-ext-1.discordapp.net/external/OllWGq5ta58LX6KoA8yEVTMrI9L4BJ0iE_T0pE4TZvw/https/i.imgur.com/LbjDuZ8.png?format=webp&quality=lossless&width=1618&height=403"
+      Thumbnail: "https://i.imgur.com/1oVwqr7.png"
+      ReviewFormat: "> **Reseña:** `{review}`" # Se insertará después de {rating}
+
+
+# ===========================================================================
+# SISTEMA DE NIVELES
+# ===========================================================================
+# Variables disponibles:
+# {userName}: YouSeeMeRunning
+# {user}: @YouSeeMeRunning
+# {userId}: 264032125496459265 - Este es el ID
+# {userBanner}: Muestra el banner del usuario en el campo de imagen
+# {guildName}: Nombre del servidor
+# {guildIcon}: Ícono del servidor
+# {oldLevel}: ¿Cuál era tu nivel anterior?
+# {newLevel}: ¿Cuál es tu nuevo nivel?
+# {oldXP}: ¿Cuánta XP ganaste para subir de nivel?
+# {newXP}: ¿Cuánta XP necesitas para subir de nivel nuevamente?
+# {randomLevelMessage}: Muestra un mensaje aleatorio de nivel del archivo lang.yml
+# {userIcon}: Muestra el ícono del usuario
+# {guildIcon}: Muestra el ícono del servidor
+
+LevelingSystem:
+  Enabled: false # ¿Activar sistema de niveles?
+  ResetDataOnLeave: false # ¿Reiniciar nivel y XP si el usuario abandona el servidor?
+  MessageXP: "10-20" # Rango de XP ganada por enviar mensajes
+  VoiceXP: "1-3" # Rango de XP ganada por estar en un canal de voz
+  XPNeeded: 150 # Multiplicador de XP por nivel
+  Permission: ["ROLE_ID", "ROLE_ID"] # ¿Quién puede usar los comandos de administración de niveles?
+  ChannelSettings:
+    LevelUpChannelID: "" # Dejar vacío para usar el canal actual del usuario
+    DisabledChannels: [""] # Los usuarios no ganarán XP en estos canales
+    DisabledCategories: [""] # Los usuarios no ganarán XP en estas categorías
+
+  CooldownSettings:
+    EnableXPCooldown: true # ¿Activar tiempo de espera para ganar XP y evitar spam?
+    XPCooldown: "3s" # Tiempo de espera para XP (1s/1m/1h)
+    VoiceInterval: "10s" # Intervalo de XP en voz
+
+  LevelUpMessageSettings:
+    LevelUpMessage: "{user}, ahora eres nivel {level}"
+    UseEmbed: true # ¿Usar embed para el mensaje de subida de nivel?
+    Embed:
+      Title: "🎉 ¡Subiste de Nivel!"
+      Description:
+        - "{randomLevelMessage}"
+      Footer:
+        Text: ""
+        Icon: ""
+      Author:
+        Text: ""
+        Icon: ""
+      Color: "#1769FF"
+      Image: ""
+      Thumbnail: "{userIcon}"
+
+  RoleSettings:
+    StackRoles: false # ¿Acumular roles de nivel (mantener los anteriores)?
+    LevelRoles:
+      - level: 1
+        roleID: "" # ID del rol que se da al llegar al nivel 1
+      - level: 5
+        roleID: "" # ID del rol que se da al llegar al nivel 5
+
+    ScaleRewards:
+      StackRewards: false # ¿Acumular recompensas?
+      Rewards:
+        - level: +1 # Por cada nivel ganado
+          coins: 10 # Se dan 10 monedas
+
+RankCard: # Diseño de la tarjeta de rango
+  Background: "banner.png" # Imagen de fondo
+  Font: "WinterDrink.ttf" # Fuente de texto
+  OverlayOpacity: 0.6 # Opacidad de la capa superior (0-1)
+
+  UsernameStyles: # Estilo del nombre de usuario
+    UsernameColor: "#FFC0CB" # Color del nombre
+    UsernameSize: "5xl" # Tamaño del nombre
+    UsernameFontWeight: "font-bold" # Grosor de la fuente
+
+  LevelTextStyles: # Estilo del texto de nivel
+    LevelTextColor: "#ADD8E6" # Color del texto "Nivel"
+    LevelValueColor: "#FFD700" # Color del número de nivel
+    LevelTextSize: "4xl"
+
+  RankTextStyles: # Estilo del texto de rango
+    RankTextColor: "#ADD8E6"
+    RankValueColor: "#FFD700"
+    RankTextSize: "4xl"
+
+  XPTextStyles: # Estilo del texto de XP
+    XPTextColor: "#ADD8E6"
+    XPValueColor: "#FFD700"
+    XPTextSize: "4xl"
+
+  ProgressBarStyles: # Estilo de la barra de progreso
+    ProgressBarColor: "#00BFA5"
+
+# ===========================================================================
+# MODERACIÓN
+# ===========================================================================
+ModerationRoles: # ¿Quién puede usar estos comandos?
+  reminder: ["ROLE_ID", "ROLE_ID"] # Permite establecer recordatorios para otros usuarios
+  addrole: ["ROLE_ID", "ROLE_ID"] # Añadir rol a un usuario
+  roleall: ["ROLE_ID", "ROLE_ID"] # Dar rol a todos los usuarios
+  ban: ["ROLE_ID", "ROLE_ID"] # Banear usuarios
+  tempban: ["ROLE_ID", "ROLE_ID"] # Baneo temporal
+  clearchannel: ["ROLE_ID", "ROLE_ID"] # Limpiar canal
+  clearhistory: ["ROLE_ID", "ROLE_ID"] # Limpiar historial
+  cleartimeout: ["ROLE_ID", "ROLE_ID"] # Quitar silencio
+  embed: ["ROLE_ID", "ROLE_ID"] # Crear embeds
+  history: ["ROLE_ID", "ROLE_ID"] # Ver historial de moderación
+  kick: ["ROLE_ID", "ROLE_ID"] # Expulsar usuarios
+  poll: ["ROLE_ID", "ROLE_ID"] # Crear encuestas
+  purge: ["ROLE_ID", "ROLE_ID"] # Eliminar mensajes en masa
+  removerole: ["ROLE_ID", "ROLE_ID"] # Quitar rol a un usuario
+  setnote: ["ROLE_ID", "ROLE_ID"] # Añadir nota a un usuario
+  slowmode: ["ROLE_ID", "ROLE_ID"] # Activar modo lento
+  timeout: ["ROLE_ID", "ROLE_ID"] # Silenciar usuario
+  unban: ["ROLE_ID", "ROLE_ID"] # Desbanear usuario
+  warn: ["ROLE_ID", "ROLE_ID"] # Advertir usuario
+  unwarn: ["ROLE_ID", "ROLE_ID"] # Quitar advertencia
+  temprole: ["ROLE_ID", "ROLE_ID"] # Rol temporal
+  nickname: ["ROLE_ID", "ROLE_ID"] # Cambiar apodo
+  lockdown: ["ROLE_ID", "ROLE_ID"] # Bloquear canal
+  blacklist: ["ROLE_ID", "ROLE_ID"] # Gestionar lista negra
+  crypto: ["ROLE_ID", "ROLE_ID"] # Comandos de cripto
+
+PurgeLogChannel: "CHANNEL_ID" # Canal donde se registran las purgas de mensajes
+
+Warnings:
+  Expiry: "30d" # Las advertencias expiran en 30 días (ejemplo: 1d 15m = 1 día 15 minutos)
+
+  Punishments: # Castigos automáticos según número de advertencias
+    1:
+      Timeout: "" # Dejar vacío para sin castigo
+    2:
+      Timeout: "10m" # Silencio de 10 minutos
+    3:
+      Timeout: "15m" # Silencio de 15 minutos (soporta hasta 30 días)
+
+AutoKick: # Expulsión automática por no verificarse
+  Enabled: false # ¿Activar expulsión automática?
+  Time: "10s" # Tiempo antes de expulsar (ejemplo: 1h 15s = 1 hora 15 segundos)
+  Role: ["ROLE_ID", "ROLE_ID"] # El usuario necesita uno de estos roles para no ser expulsado
+  DM:
+    Enabled: true # ¿Enviar DM al usuario expulsado?
+    Embed:
+      Title: "⚠️ Fallo de Verificación ⚠️"
+      Description:
+        - "🚫 **Aviso:** No completaste la verificación en el tiempo dado."
+        - "Por favor vuelve a unirte y verifica para permanecer en nuestro servidor. discord.gg/fluxobot"
+      Color: "#1769FF"
+      Footer: "Expulsión Automática | fluxoBot"
+
+
+# Sistema de Prevención de Cuentas Alternativas
+AltPrevention:
+  Enabled: false # ¿Activar prevención de cuentas alt?
+  TimeLimit: "30d" # Antigüedad mínima de cuenta requerida
+  KickAlts: true # ¿Expulsar cuentas alt detectadas?
+
+  DM:
+    Enabled: true # ¿Enviar DM a la cuenta alt?
+    Embed:
+      Title: "⚠️ Alerta de Cuenta Alternativa ⚠️"
+      Description:
+        - "🚫 **Aviso:** Tu cuenta es demasiado nueva para unirse a {guildName}."
+        - "🕒 **Antigüedad de la Cuenta:** {user-createdAt}"
+        - "🛑 **Antigüedad Requerida:** 30 días"
+        - "Por favor vuelve cuando tu cuenta cumpla el requisito de antigüedad."
+        - "**📅 Fecha de Detección:** {longTime}"
+      Footer:
+        Text: "Sistema de Detección de Alts | {guildName}"
+        Icon: "{guildIcon}"
+      Author:
+        Text: "{userName}"
+        Icon: "{user-avatar}"
+      Color: "#1769FF"
+      Image: "{userBanner}"
+      Thumbnail: "{user-avatar}"
+
+  Log:
+    LogsChannelID: "CHANNEL_ID"
+    Title: "⚠️ Posible Cuenta Alternativa Detectada ⚠️"
+    Description:
+      - "**👤 Usuario:** {user} (ID: {userId})"
+      - "🕒 **Antigüedad de la Cuenta:** {user-createdAt}"
+      - "**👢 Expulsado:** {kickStatus}"
+      - "🛑 **Antigüedad Requerida:** 30 días"
+      - "**📅 Fecha de Detección:** {longTime}, {shortTime}"
+    Footer:
+      Text: "Sistema de Detección de Alts | {guildName}"
+      Icon: "{guildIcon}"
+    Author:
+      Text: "{userName}"
+      Icon: "{user-avatar}"
+    Color: "#1769FF"
+    Image: "{userBanner}"
+    Thumbnail: "{user-avatar}"
+
+# Sistema de Palabras en Lista Negra
+BlacklistWords:
+  Enabled: false # ¿Activar filtro de palabras prohibidas?
+  Patterns: # Patrones de palabras bloqueadas
+    - "example.net"        # Coincidencia exacta
+    - "*.example.com"      # Coincide con cualquier subdominio de example.com
+    - "discord.gg/*"       # Coincide con cualquier ruta después de discord.gg/
+    - "*badword*"          # Coincide con "badword" en cualquier parte del texto
+    - "http:*"             # Coincide con cualquier texto que empiece con http:
+    - "www.*"              # Coincide con cualquier texto que empiece con www.
+    - "regex:\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"  # Regex de correo electrónico
+    - "regex:\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b" # Regex de dirección IP
+  WhitelistWords: # Palabras permitidas aunque estén en la lista negra
+    - "discord.gg/fluxobot"
+  WhitelistChannels: # Canales donde NO aplica el filtro
+    - "CHANNEL_ID"
+  WhitelistCategories: # Categorías donde NO aplica el filtro
+    - "CATEGORY_ID"
+  BypassPerms: ["ManageMessages"] # Permisos que permiten saltarse el filtro
+  BypassRoles: ["ROLE_ID"] # Roles que pueden saltarse el filtro
+  Message: "¡{user}, usaste una palabra prohibida!"
+  DM:
+    Enabled: true # ¿Enviar DM al usuario?
+    Message: "Hola {user}, enviaste una palabra prohibida, **{blacklistedword}**. \n Por favor abstente de hacerlo en el futuro."
+    Type: "Message" # Message (Mensaje) o Embed
+    Embed:
+      Title: "🚫 Palabra Prohibida Detectada"
+      Description:
+        - "Hola {user}, enviaste una palabra prohibida"
+        - "🔍 **Palabra Prohibida:** {blacklistedword}"
+        - "🚫 **Acción:** Tu mensaje fue eliminado"
+        - "**🕰️ Hora:** {longtime}, {shorttime}"
+      Color: "#1769FF"
+      Footer: "fluxoBot | {shorttime}"
+      Thumbnail: true
+  LogsChannelID: "CHANNEL_ID"
+  Embed:
+    Title: "🚫 Detección de Palabra Prohibida"
+    Description:
+      - "🚨 **Alerta:** {user} usó una palabra prohibida"
+      - "🔍 **Palabra Infractora:** {blacklistedword}"
+      - "🚫 **Consecuencia:** El mensaje fue eliminado"
+      - "**🕰️ Fecha y Hora:** {longtime}, {shorttime}"
+    Footer:
+      Text: "fluxoBot | {guildName}"
+      Icon: "{guildIcon}"
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#1769FF"
+    Image: "{userBanner}"
+    Thumbnail: ""
+
+AntiNuke:
+  Enabled: false # ¿Activar protección Anti-Nuke?
+  WhitelistedRoles: ["ROLE_ID1", "ROLE_ID2"] # Roles exentos de la protección
+
+  Default: # Aplica a todos los que tengan poder en el servidor (silenciar, expulsar, banear, gestionar servidor, etc.)
+    Tiers:
+      Tier1: # Primer nivel de protección
+        Protection:
+          kickThreshold: 2 # Máximo de expulsiones antes de activar
+          banThreshold: 2 # Máximo de baneos antes de activar
+          channelDeleteThreshold: 2 # Máximo de canales eliminados antes de activar
+          roleDeleteThreshold: 2 # Máximo de roles eliminados antes de activar
+          duration: "10s" # Ventana de tiempo para evaluar la actividad
+        Actions:
+          notify: ["USER_ID1", "USER_ID2"] # IDs de usuarios a notificar
+          removeRole: false # ¿Quitar el rol de moderación al infractor?
+          mute: true # Silenciar al infractor (el bot no puede silenciar si tienen admin)
+          ban: false # ¿Banear al infractor?
+        Logs:
+          Enabled: true
+          Embed:
+            Title: "Anti Nuke - Nivel 1"
+            Description:
+              - "👤 **Usuario:** {user}"
+              - "🔍 **Detonante:** {threshold}"
+              - "🚫 **Cantidad:** {threshold_amount}"
+              - "**📅 Fecha:** {timestamp}"
+            Color: "#1769FF"
+            Footer: "Anti Nuke | fluxoBot"
+            Thumbnail: true
+            LogsChannelID: "CHANNEL_ID" # Pon "" para desactivar
+
+      Tier2: # Segundo nivel - umbrales más estrictos - Continúa desde el Nivel 1
+        Protection:
+          kickThreshold: 4 # 2 expulsiones más que el nivel 1
+          banThreshold: 4
+          channelDeleteThreshold: 4
+          roleDeleteThreshold: 4
+          duration: "20s"
+        Actions:
+          notify: ["USER_ID1", "USER_ID2"]
+          removeRole: true # ¿Quitar el rol de moderación al infractor?
+          mute: false
+          ban: false
+        Logs:
+          Enabled: true
+          Embed:
+            Title: "Anti Nuke - Nivel 2"
+            Description:
+              - "👤 **Usuario:** {user}"
+              - "🔍 **Detonante:** {threshold}"
+              - "🚫 **Cantidad:** {threshold_amount}"
+              - "**📅 Fecha:** {timestamp}"
+            Color: "#1769FF"
+            Footer: "Anti Nuke | fluxoBot"
+            Thumbnail: true
+            LogsChannelID: "CHANNEL_ID"
+
+        # Soporta niveles ilimitados
+
+# Sistema Anti-Hoist (evita que usuarios se pongan arriba en la lista con caracteres especiales)
+AntiHoist:
+  EnableOnUserJoin: false # ¿Activar al unirse al servidor?
+  EnableOnUserUpdate: false # ¿Activar cuando el usuario edita su perfil?
+  DefaultDisplayName: "zName" # Nombre por defecto si el apodo solo tiene caracteres no permitidos
+  AllowRoles: ["ROLE_ID"] # Roles que pueden usar el comando
+  DisallowedCharacters: ['-', '_', '!', '?', '.', '"'] # Caracteres a eliminar del inicio del nombre
+  LogsChannelID: "CHANNEL_ID"
+  LogEmbed:
+    Title: "☢️ Apodo de Usuario Cambiado"
+    Description:
+      - "**👤 Usuario:** {user}"
+      - "🟥 **Nombre Anterior:** `{oldDisplayName}`"
+      - "🟩 **Nombre Nuevo:** `{newDisplayName}`"
+    Color: "#1769FF"
+    Footer: "Sistema Anti-Hoist | fluxoBot"
+    Thumbnail: true
+
+# Anti Mención Masiva
+AntiMassMention:
+  Enabled: false # ¿Activar anti menciones masivas?
+  Amount: 5 # Cantidad de menciones en un mensaje para considerarse masivo
+  BypassPerms: ["ManageMessages"] # Permisos que permiten saltarse el filtro
+  BypassRoles: ["ROLE_ID"] # Roles que pueden saltarse el filtro
+  Message: "¡{user}, las menciones masivas no están permitidas aquí!"
+  TimeoutUser: true # ¿Silenciar al usuario?
+  TimeoutTime: "5m" # Duración del silencio
+  LogsChannelID: "CHANNEL_ID"
+  SendDM: true # ¿Enviar DM al usuario?
+  DirectMessage: "{user} has sido silenciado por {time} por hacer menciones masivas."
+
+# Anti Spam
+AntiSpam:
+  Enabled: false # ¿Activar anti spam?
+  MsgLimit: 5 # Cantidad de mensajes en el tiempo definido para considerarse spam
+  TimeLimit: "1s" # Ventana de tiempo
+  BypassPerms: ["ManageMessages"]
+  BypassRoles: ["ROLE_ID"]
+  Message: "¡{user}, el spam no está permitido aquí!"
+  TimeoutUser: true # ¿Silenciar al usuario?
+  TimeoutTime: "3m" # Duración del silencio
+  LogsChannelID: "CHANNEL_ID"
+  SendDM: true
+  DirectMessage: "{user} has sido silenciado por {time} por hacer spam."
+
+AntiGhostPing: # Evita que mencionen y borren el mensaje (ghost ping)
+  Enabled: false # ¿Activar anti ghost ping?
+  TimeLimit: "2s" # Tiempo máximo para detectar el ghost ping
+  TimeoutUser: true # ¿Silenciar al usuario?
+  TimeoutTime: "1m"
+  BypassPerms: ["ManageMessages"]
+  BypassRoles: ["ROLE_ID"]
+  Message: "¡{user}, hacer ghost ping no está permitido aquí!"
+  LogsChannelID: "CHANNEL_ID"
+  SendDM: true
+  DirectMessage: "{user}, has sido silenciado por {time} por hacer ghost ping."
+
+# ===========================================================================
+# CONFIGURACIÓN DE MENSAJES DE BIENVENIDA/DESPEDIDA
+# ===========================================================================
+# Variables disponibles:
+# {userName}: YouSeeMeRunning
+# {user}: @YouSeeMeRunning
+# {userTag}: YouSeeMeRunning#1234
+# {userId}: 264032125496459265 - Este es el ID
+# {userBanner}: Muestra el banner del usuario en el campo de imagen
+# {UserCreation}: ¿Qué tan antigua es su cuenta? Marca de tiempo de Discord
+# {guildName}: Nombre del servidor
+# {guildIcon}: Ícono del servidor
+# {memberCount}: Conteo de miembros del servidor - 1°, 2°, 3°, 4°...
+# {memberCountNumeric}: Muestra 5, 6, 7...
+# {longTime}: 1 de marzo de 2023
+# {shortTime}: 17:00
+# {user-joinedAt}: Para mensajes de despedida, muestra cuándo se unió por primera vez
+# {user-createdAt}: La fecha en que se creó la cuenta de Discord del usuario
+# {kickStatus}: ¿El usuario fue expulsado o no?
+# {autoKickTime}: ¿Cuánto tiempo hasta que el usuario sea expulsado?
+# {invitedBy}: ¿Quién lo invitó?
+# {invitedByCount}: ¿Cuántas invitaciones tiene la persona que lo invitó?
+# {joinDate} # Marca de tiempo de Discord de cuando se unió
+# {joinTime} # Marca de tiempo de Discord de cuando se unió
+# {leaveDate} # Marca de tiempo de Discord de cuando se fue
+# {leaveTime} # Marca de tiempo de Discord de cuando se fue
+
+WelcomeMessage:
+  Enabled: false # ¿Activar mensaje de bienvenida?
+  ChannelID: "CHANNEL_ID" # Canal donde se envía el mensaje
+  Type: "BOTH" # EMBED, MESSAGE (solo texto), BOTH (ambos - el texto aparece arriba del embed)
+  Text: "Bienvenido a **{guildName}**, {userName}"
+  Embed:
+    Title: ""
+    Description:
+      - "¡Bienvenido a **{guildName}**, {userName}! Estamos encantados de tenerte en nuestra comunidad. 🎉"
+      - ""
+      - "Invitado por » {invitedBy} ({invitedByCount} invitaciones)"
+      - "Fecha de ingreso » {joinDate} ({joinTime})"
+      - "Antigüedad de cuenta » {UserCreation}"
+      - "Miembros » {memberCount} miembro"
+    Footer:
+      Text: "{guildName} • Hoy a las {shortTime}"
+      Icon: "{guildIcon}"
+    Author:
+      Text: "¡Bienvenido a {guildName}!"
+      Icon: "https://static-00.iconduck.com/assets.00/hand-waving-icon-1875x2048-trzytj43.png"
+    Color: "#1769FF"
+    Image: "{userBanner}"
+    Thumbnail: "{user-avatar}"
+
+  DM:
+    Enabled: false # ¿Enviar DM de bienvenida?
+    Embed:
+      Title: "¡Bienvenido, {userName}!"
+      Description:
+        - "¡Bienvenido a **{guildName}**, {userName}! Estamos encantados de tenerte en nuestra comunidad. 🎉"
+        - "¡Eres nuestro miembro número {memberCount}!"
+      Footer:
+        Text: "{guildName} • Hoy a las {shortTime}"
+        Icon: "{guildIcon}"
+      Author:
+        Text: "¡Bienvenido a {guildName}!"
+        Icon: "https://static-00.iconduck.com/assets.00/hand-waving-icon-1875x2048-trzytj43.png"
+      Color: "#1769FF"
+      Image: "{userBanner}"
+      Thumbnail: "{user-avatar}"
+
+LeaveMessage:
+  Enabled: false # ¿Activar mensaje de despedida?
+  ChannelID: "CHANNEL_ID"
+  Type: "BOTH"
+  Text: "¡Adiós, {userName}!"
+  Embed:
+    Title: ""
+    Description:
+      - "¡Adiós, {userName}!"
+      - "Esperamos verte pronto...."
+    Footer:
+      Text: "{guildName} • {shortTime}"
+      Icon: "{guildIcon}"
+    Author:
+      Text: "👋 ¡Hasta pronto!"
+      Icon: ""
+    Color: "#1769FF"
+    Image: ""
+    Thumbnail: "{user-avatar}"
+
+# ===========================================================================
+# CONFIGURACIÓN DE ROLES AL UNIRSE / VERIFICACIÓN
+# ===========================================================================
+JoinRoleSettings:
+  Enabled: false # ¿Activar roles automáticos al unirse?
+  JoinRoles: ["ROLE_ID", "ROLE_ID"] # Roles que reciben los usuarios al unirse al servidor
+  RestoreRoles: # ¿Devolver los roles originales si el usuario vuelve al servidor?
+    Enabled: true
+    Blacklist: ["ROLE_ID", "ROLE_ID"] # Roles que NO se devolverán
+    Whitelist: ["ROLE_ID", "ROLE_ID"] # Solo estos roles serán devueltos
+
+# Tipos de Verificación:
+# BUTTON - Al hacer clic en el botón, el usuario recibe el rol especificado
+# CALCULATOR - Resolver una pregunta matemática para recibir el rol
+VerificationSettings:
+  Enabled: false # ¿Activar sistema de verificación?
+  DeleteAllMessages: true # ¿Eliminar todos los mensajes de usuarios en el canal de verificación?
+  ChannelID: "CHANNEL_ID" # Canal donde los usuarios se verifican
+  VerificationType: "BUTTON" # Opciones: BUTTON, CALCULATOR
+  VerifiedRoleID: ["ROLE_ID"] # Roles que reciben al verificarse exitosamente
+  RoleToRemove: "" # Rol a quitar al verificarse, dejar vacío para ninguno
+  EnableUnverifiedRole: false # ¿Activar rol de no verificado? (Se crea automáticamente y bloquea acceso a todos los canales excepto el de verificación)
+
+VerificationEmbed:
+  Title: "Verificación"
+  Description: "Por favor verifica para obtener acceso completo al servidor.\n¡Haz clic en el **botón** de abajo para verificarte!"
+  Image: "https://i.imgur.com/R4qVpUy.png"
+
+# Colores válidos para botones:
+# Primary = azul violeta
+# Secondary = gris
+# Success = verde
+# Danger = rojo
+VerificationButton:
+  Name: "Verificar"
+  Emoji: "✅"
+  Color: "Secondary"
+
+# ===========================================================================
+# CONFIGURACIÓN DE SORTEOS
+# ===========================================================================
+Giveaways:
+  AllowRoles: ["ROLE_ID", "ROLE_ID"] # Roles que pueden crear sorteos
+  GiveawayStatusCheck: 7500 # En ms, cada cuánto se revisa si terminó un sorteo
+  DirectMessageWinners: true # ¿Enviar mensaje directo a los ganadores?
+  Embed:
+    ActiveGiveaway: # Sorteo activo
+      EmbedColor: "#1769FF"
+      EmbedImage: "https://i.imgur.com/yw6UcuW.jpg"
+      EmbedFooterIcon: "https://i.imgur.com/13VlA3w.png"
+      EmbedThumbnail: "https://i.imgur.com/ewT6bOT.png"
+      ShowTitle: true # ¿Mostrar título?
+      ShowThumbnail: true # ¿Mostrar miniatura?
+      ShowHostedBy: true # ¿Mostrar quién organiza?
+      ShowEndsIn: true # ¿Mostrar cuándo termina?
+      ShowEntries: true # ¿Mostrar cantidad de participantes?
+      ShowWhitelistRoles: true # ¿Mostrar roles permitidos?
+      ShowBlacklistRoles: true # ¿Mostrar roles excluidos?
+      ShowMinimumServerJoinDate: true # ¿Mostrar fecha mínima de ingreso al servidor?
+      ShowMinimumAccountAge: true # ¿Mostrar antigüedad mínima de cuenta?
+      ShowImage: true
+      ShowFooter: true
+      Button:
+        JoinButton:
+          ButtonStyle: "Secondary"
+          ButtonEmoji: "🎁"
+          ButtonText: "Participar"
+        CheckPercent:
+          ButtonStyle: "Success"
+          ButtonEmoji: "📊"
+          ButtonText: "Probabilidad"
+
+    EndedGiveaway: # Sorteo terminado
+      EmbedColor: "#1769FF"
+      EmbedImage: "https://i.imgur.com/7TQDDAy.png"
+      EmbedFooterIcon: "https://i.imgur.com/13VlA3w.png"
+      EmbedThumbnail: "https://i.imgur.com/ewT6bOT.png"
+      ShowTitle: true
+      ShowThumbnail: true
+      ShowImage: true
+      ShowWinnersField: true # ¿Mostrar campo de ganadores?
+      ShowEntriesField: true # ¿Mostrar campo de participantes?
+      ShowFooter: true
+
+# ===========================================================================
+# CONFIGURACIÓN DE AFK
+# ===========================================================================
+# Variables: {user} {userMention} {backTime} {reason}
+AFK:
+  Enabled: false # ¿Activar sistema AFK?
+  AFKStatusCheck: 5000 # En ms, cada cuánto se revisan los estados AFK
+  AllowAnyone: true # ¿Permitir a todos usar el comando AFK?
+  AllowRoles: ["ROLE_ID", "ROLE_ID"] # Roles que pueden usar el comando AFK si AllowAnyone es false
+
+  NotifyChannel: true # ¿Notificar en el canal donde se usó el comando AFK?
+  NotifyMessage: "## ¡{username} está AFK! Volverá en {backTime}" # Si UseNotifyEmbed es false
+  UseNotifyEmbed: true # ¿Usar embed para notificaciones en el canal?
+  NotifyEmbed:
+    EmbedColor: "#1769FF"
+    Title: ""
+    Description:
+      - "## ¡{username} se ha puesto AFK!"
+      - "Razón: `{reason}`"
+      - "Volverá en {backTime}"
+    EmbedImage: ""
+    EmbedThumbnail: "https://i.imgur.com/GbQoTVi.png"
+
+  ReplyToPinger: true # ¿Responder al usuario que mencionó al usuario AFK?
+  NoBackTime: "¡en un momento!" # Si no se especifica tiempo de regreso, qué decir al final
+  ReplyMessage: "**{username}** está **AFK** actualmente. ¡Volverá **{backTime}**!"
+  UseReplyEmbed: true # ¿Usar embed para respuestas?
+  ReplyEmbed:
+    EmbedColor: "#1769FF"
+    Title: ""
+    Description:
+      - "## {username} está AFK actualmente"
+      - "Razón: `{reason}`"
+      - "Volverá en {backTime}"
+    EmbedImage: ""
+    EmbedThumbnail: "https://i.imgur.com/GbQoTVi.png"
+
+  AfktagInDisplayName: false # ¿Mostrar etiqueta AFK en el nombre del usuario?
+  AfkTag: "[AFK]"
+
+  EnableAfkRole: true # ¿Asignar rol AFK al usuario?
+  MakeAfkRoleSeperate: true # ¿Mostrar el rol AFK separado en la lista de miembros?
+  AfkRoleName: "AFK"
+  AfkRoleColor: "#1769FF"
+
+  SendNoLongerAfkMessage: true # ¿Enviar mensaje cuando el usuario vuelve de AFK?
+  NoLongerAfkMessage: "¡{username} ya no está AFK!"
+
+# ===========================================================================
+# CONFIGURACIÓN DE ROLES POR REACCIÓN
+# ===========================================================================
+ReactionRoles:
+  Enabled: false # ¿Activar roles por reacción?
+
+  Example: # Ejemplo de panel
+    type: "SELECT" # BUTTON (botón), REACT (reacción), SELECT (menú desplegable)
+    resetReacts: true # ¿Eliminar la reacción del usuario después de usarla?
+    ChannelID: "CHANNEL_ID"
+    Embed:
+      Title: "**  ¡Elige tus Roles!**"
+      Description:
+        - " "
+        - ">   **DMs Abiertos** » Las personas pueden enviarte DM"
+        - ">   **DMs Cerrados** » No quieres que te envíen DM"
+        - ">   **Pedir para DM** » Las personas necesitan pedir permiso para enviarte DM"
+        - " "
+        - "*(( ¡Reacciona con el emoji correspondiente para obtener tu rol! ))*"
+      Footer:
+        Text: "fluxo Bot | Sistema de Roles por Reacción"
+        Icon: "https://i.imgur.com/1oVwqr7.png"
+      Author:
+        Text: "Panel de Reacciones"
+        Icon: "https://i.imgur.com/1oVwqr7.png"
+      Color: "#1769FF"
+      Image: ""
+      Thumbnail: "https://i.imgur.com/1oVwqr7.png"
+    Reactions:
+      - Name: "DMs Abiertos"
+        Emoji: "📢"
+        Style: "Success"
+        Description: "Los DMs están abiertos"
+        RoleID: "ROLE_ID"
+      - Name: "DMs Cerrados"
+        Emoji: "❌"
+        Style: "Danger"
+        Description: "Los DMs están cerrados"
+        RoleID: "ROLE_ID"
+      - Name: "Pedir para DM"
+        Emoji: "🙋"
+        Style: "Secondary"
+        Description: "Pedir para enviar DM"
+        RoleID: "ROLE_ID"
+
+    # Agrega más abajo
+
+# ===========================================================================
+# COMANDOS PERSONALIZADOS
+# ===========================================================================
+# Variables: {guildName}, {guildId}, {userName}, {userId}, {userMention}, {channelName}, {channelId}, {channelMention}, {commandName}, {longTime}, {shortTime}, {memberCount}
+
+CommandsEnabled: false # ¿Activar comandos personalizados?
+CommandsPrefix: "!" # Prefijo para los comandos personalizados
+
+CustomCommands:
+  example: # Nombre del comando (se usa como !example)
+    type: "EMBED" # Elegir entre EMBED y TEXT
+    text: "" # Respuesta de texto si el tipo es TEXT
+    Embed:
+      embedColor: "#1769FF"
+      embedAuthor: ""
+      embedTitle: ""
+      embedDescription:
+      - "Estamos emocionados de tenerte aquí en fluxo Development. A continuación encontrarás información importante para comenzar."
+      embedFields:
+      - name: "🔢 Miembros del Servidor"
+        value: "¡Ahora somos **{memberCount} miembros**! Únete a las discusiones y colabora con otros entusiastas de la tecnología."
+        inline: false
+      - name: "📜 Próximos Pasos"
+        value: "1. **Preséntate**: Ve a `#presentaciones` para contarnos sobre ti.\n2. **Lee las Reglas**: Consulta `#reglas` para conocer nuestras normas de la comunidad.\n3. **Participa**: ¡Entra al chat `#general` para empezar a interactuar!"
+        inline: false
+      - name: "🛠️ Soporte"
+        value: "¿Necesitas ayuda? Contáctanos en `#soporte` o visita nuestra [página de soporte](https://docs.fluxodevelopment.net/support)."
+        inline: false
+      embedFooter: "¡Nos alegra que estés aquí! | fluxo Development {shorttime} {longTime}"
+      imageUrl: ""
+      thumbnailUrl: ""
+      authorIconUrl: ""
+      footerIconUrl: ""
+    roles:
+      whitelist: ["ROLE_ID", "ROLE_ID"] # Solo estos roles pueden usar el comando
+      blacklist: ["ROLE_ID", "ROLE_ID"] # Estos roles NO pueden usar el comando
+    options:
+      deleteTriggerMessage: true # ¿Eliminar el mensaje que activó el comando?
+      replyToUser: false # ¿Responder directamente al usuario?
+    buttons:
+      1:
+        Enabled: true
+        Name: "Configuración de MongoDB"
+        Emoji: "📑"
+        Link: "https://docs.fluxodevelopment.net/misc/mongodb-setup"
+      2:
+        Enabled: true
+        Name: "Wiki"
+        Emoji: "📕"
+        Link: "https://docs.fluxodevelopment.net/"
+
+# ===========================================================================
+# SISTEMA DE SUGERENCIAS
+# ===========================================================================
+SuggestionSettings:
+  Enabled: true # ¿Activar sistema de sugerencias?
+  ChannelID: "CHANNEL_ID" # Canal donde se publican las sugerencias
+  AllowedRoles: ["ROLE_ID"] # Roles que pueden usar el comando de sugerencias
+  SuggestionAcceptDenyRoles: ["ROLE_ID"] # Roles que pueden aceptar/rechazar sugerencias con /suggestion accept/deny <id>
+  threadName: "{user}-sugerencia" # Variables: {user}, dejar vacío para desactivar hilos
+  UseQuestionModal: true # ¿Activar el modal de preguntas al hacer una sugerencia?
+  blockBlacklistWords: true # ¿Filtrar sugerencias con el Sistema de Palabras Prohibidas?
+  sendDM: true # ¿Enviar DM al usuario sobre el estado de su sugerencia?
+
+  AdditionalModalInputs: # Máximo 4 entradas adicionales
+    1: # Solo funciona si UseQuestionModal es true
+      ID: "product" # Se usa como {modal_product}
+      Question: "¿Para qué producto es tu sugerencia?"
+      Placeholder: "fluxo Bot, fluxo Tickets, Discord"
+      Style: "Short" # Short (corto) o Paragraph (párrafo)
+      Required: true # ¿Es obligatorio?
+      maxLength: 1000
+
+SuggestionUpvote: # Botón de voto positivo
+  ButtonName: "{upvotecount} ({upvotePercent}%)"
+  ButtonEmoji: "👍"
+  ButtonColor: "Success"
+  upvoteEmoji: "👍"
+
+SuggestionDownvote: # Botón de voto negativo
+  ButtonName: "{downvotecount} ({downvotePercent}%)"
+  ButtonEmoji: "👎"
+  ButtonColor: "Danger"
+  downvoteEmoji: "👎"
+
+# Variables: {user}, {upvotecount}, {upvoteemoji}, {downvoteemoji}, {downvotecount}, {Suggestion}, {SuggestionID}, {ShortTime} HH:MM:SS. {LongTime} 5 de mayo de 2024
+SuggestionEmbed:
+  EmbedColor: "#1769FF"
+  EmbedTitle: "Sugerencia de {user}"
+  EmbedDescription:
+  - "**Sugerencia**"
+  - "```{suggestion}```"
+  - "* **Información**"
+  - "> **Producto:** {modal_product}"
+  EmbedFooter: "ID de Sugerencia: {SuggestionID} | {LongTime}"
+  Thumbnail: True
+  AuthorIcon: True
+
+SuggestionAcceptEmbed: # Embed al aceptar una sugerencia
+  AcceptChannelID: "" # Canal donde se publica al aceptar. Dejar vacío para no publicar
+  EmbedColor: "#4BB543"
+  EmbedTitle: "Sugerencia de {user} Aceptada"
+  EmbedBody:
+  - "**Sugerencia**"
+  - "```{suggestion}```"
+  - "**Razón**"
+  - "```{reason}```"
+  EmbedFooter: "ID de Sugerencia: {SuggestionID} | {LongTime}"
+  Thumbnail: True
+  AuthorIcon: True
+
+SuggestionDenyEmbed: # Embed al rechazar una sugerencia
+  DenyChannelID: "" # Canal donde se publica al rechazar. Dejar vacío para no publicar
+  EmbedColor: "#a82e2e"
+  EmbedTitle: "Sugerencia de {user} Rechazada"
+  EmbedBody:
+  - "**Sugerencia**"
+  - "```{suggestion}```"
+  - "**Razón**"
+  - "```{reason}```"
+  EmbedFooter: "ID de Sugerencia: {SuggestionID} | {LongTime}"
+  Thumbnail: True
+  AuthorIcon: True
+
+# ===========================================================================
+# CONFIGURACIÓN DE MÚSICA
+# ===========================================================================
+MusicCommand:
+  Enabled: true # ¿Activar comandos de música?
+
+  EnableWhitelist: false # Pon false para que todos puedan usar los comandos de música
+  WhitelistRoles: ["ROLE_ID", "ROLE_ID"] # Rol de DJ por ejemplo
+  BlacklistRoles: ["ROLE_ID", "ROLE_ID"] # Roles que NO pueden usar música
+  LeaveOnEmpty: true # ¿Salir del canal de voz cuando esté vacío?
+  LeaveOnEmptyTimer: 10000 # En ms, tiempo de espera antes de salir
+  Emojis:
+    Platform: # Emojis/íconos de plataformas
+      YouTube: "https://i.imgur.com/r1QMg8M.png"
+      Spotify: "https://i.imgur.com/WBXUkBu.png"
+      SoundCloud: "https://i.imgur.com/cBAR3q2.png"
+      AppleMusic: "https://i.imgur.com/mtiwNMG.png"
+    Music: "🎵"
+    Play: "▶️"
+    Pause: "⏸️"
+    Back: "⏪"
+    Next: "⏩"
+    Repeat: "🔁"
+
+  # Variables disponibles:
+  # {id}, {title} (título), {description} (descripción), {author} (autor), {url}, {thumbnail} (miniatura),
+  # {duration} (duración), {durationMS}, {views} (vistas), {requestedByMention}, {requestedByDisplayName}
+  # {playlistName} (nombre de lista), {playlistUrl}, {playlistThumbnail}, {platform} (plataforma),
+  # {platformEmoji}, {queueCount} (canciones en cola), {queueDuration} (duración total de cola)
+
+  CurrentTrack: # Canción actual
+    Enabled: true
+    Type: "EMBED" # EMBED o TEXT
+    Message: "Reproduciendo ahora **{title}** de {author} pedida por {requestedByDisplayName}"
+    Embed:
+      Title: ""
+      Description: "`{title} - {author}`"
+      Fields:
+        - Name: "Pedida por"
+          Value: "{requestedByMention}"
+          Inline: true
+        - Name: "Duración"
+          Value: "`{duration}`"
+          Inline: true
+        - Name: "Canciones en cola"
+          Value: "`{queueCount}`"
+          Inline: true
+      Image: ""
+      Thumbnail: "https://cdn.discordapp.com/attachments/627889189974966272/1209270505874391050/vinyl-gif.gif?ex=66ab682b&is=66aa16ab&hm=2ec12af1bbf206e11cf5bad371fab6e94b7477a41e86188df5330cccdd7b2f6f&"
+      Author:
+        Text: "{platform}"
+        Icon: "{platformEmoji}"
+      Footer:
+        Text: "fluxo Bot - Música"
+        Icon: "https://i.imgur.com/csAsSqY.png"
+      Color: "#1769FF"
+
+  TrackFinished: # Canción terminada
+    Enabled: true
+    Type: "TEXT"
+    Message: "Terminó de reproducir: **{title}** - {author}."
+    Embed:
+      Title: ""
+      Description: "Terminó de reproducir: `{title} - {author}`"
+      Fields:
+      Image: ""
+      Thumbnail: ""
+      Author:
+        Text: "{platform}"
+        Icon: "{platformEmoji}"
+      Footer:
+        Text: "fluxo Bot - Música"
+        Icon: "https://i.imgur.com/csAsSqY.png"
+      Color: "#1769FF"
+
+  AddedTrack: # Canción añadida a la cola
+    Enabled: true
+    Type: "TEXT"
+    Message: "Canción añadida a la cola: **{title}** - {author}."
+    Embed:
+      Title: ""
+      Description: "Canción añadida a la cola: `{title} - {author}`"
+      Fields:
+      Image: ""
+      Thumbnail: ""
+      Author:
+        Text: "{platform}"
+        Icon: "{platformEmoji}"
+      Footer:
+        Text: "fluxo Bot - Música"
+        Icon: "https://i.imgur.com/csAsSqY.png"
+      Color: "#1769FF"
+
+  AddedTracks: # Lista de canciones añadida a la cola
+    Enabled: true
+    Type: "TEXT"
+    Message: "¡Se añadieron **{trackCount}** canciones a la cola!"
+    Embed:
+      Title: ""
+      Description: "¡Se añadieron **{trackCount}** canciones a la cola!"
+      Fields:
+      Image: ""
+      Thumbnail: ""
+      Author:
+        Text: "{platform}"
+        Icon: "{platformEmoji}"
+      Footer:
+        Text: "fluxo Bot - Música"
+        Icon: "https://i.imgur.com/csAsSqY.png"
+      Color: "#1769FF"
+
+NowPlaying: # Diseño visual de la canción actual
+  Canvas:
+    Width: 1200 # Ancho en píxeles
+    Height: 400 # Alto en píxeles
+  BackgroundGradient: # Degradado de fondo
+    Start: "#1A1A2E"
+    End: "#16213E"
+  Font: # Fuentes de texto
+    Header:
+      size: "32px"
+      weight: "800"
+      family: "Poppins, Arial, sans-serif"
+      fillStyle: "#E94560"
+    Title:
+      size: "40px"
+      weight: "700"
+      family: "Poppins, Arial, sans-serif"
+      fillStyle: "#FFFFFF"
+    Author:
+      size: "28px"
+      weight: "600"
+      family: "Poppins, Arial, sans-serif"
+      fillStyle: "#4ECCA3"
+    Time:
+      size: "24px"
+      weight: "500"
+      family: "Poppins, Arial, sans-serif"
+      fillStyle: "#EEEEEE"
+  ProgressBar: # Barra de progreso
+    BackgroundColor: "rgba(255, 255, 255, 0.1)"
+    GradientStart: "#E94560"
+    GradientEnd: "#4ECCA3"
+    Height: 20
+    BorderRadius: 10
+  ThumbnailPlaceholder: # Color de miniatura cuando no hay imagen
+    Color: "#232931"
+  Overlay: # Capa de superposición
+    Color: "rgba(255, 255, 255, 0.03)"
+  Accent: # Color de acento
+    Color: "#4ECCA3"
+
+  Queue: # Diseño de la cola de música
+    SongsPerPage: 5 # Canciones por página (máximo 50)
+    Embed:
+      Title: "Cola\nTiempo restante: `{queueDuration}`"
+      Description: # ¡No cambies el orden de la descripción o se romperá 💀!
+      - "**Canción Actual:**\n**`{title} de {author}`**\n\n"
+      - "**A Continuación:**\n"
+      - "**`{numberInQueue}.`** **{title}** de {author} - `{duration}`"
+      - "\nPágina **{currentPage}** de **{totalPages}**"
+      Thumbnail: "https://i.imgur.com/1jNHjDe.png"
+      Image: "https://i.imgur.com/DF3p5Sv.png"
+      Author:
+        Text: ""
+        Icon: ""
+      Footer:
+        Text: "fluxo Bot - Música"
+        Icon: "https://i.imgur.com/csAsSqY.png"
+      Color: "#1769FF"
+      Buttons: # Botones de navegación de la cola
+       Start:
+        Style: "Secondary"
+        Emoji: "⏮️"
+        Text: "" # Ejemplo: Primera
+       Next:
+        Style: "Secondary"
+        Emoji: "⏩"
+        Text: "" # Ejemplo: Siguiente
+       Back:
+        Style: "Secondary"
+        Emoji: "⏪"
+        Text: "" # Ejemplo: Anterior
+       End:
+        Style: "Secondary"
+        Emoji: "⏭️"
+        Text: "" # Ejemplo: Última
+
+  Filters: # Filtros de audio
+    Embed:
+      Title: "## Filtros de Audio"
+      Thumbnail: "https://i.imgur.com/1jNHjDe.png"
+      Fields:
+       Number: "Número"
+       Filter: "Filtro"
+       Enabled: "Activado"
+       Buttons:
+        Enabled:
+         Style: "Success"
+        Disabled:
+         Style: "Secondary"
+      Footer:
+        Text: "fluxo Bot - Música"
+        Icon: "https://i.imgur.com/csAsSqY.png"
+      Color: "#1769FF"
+
+# ===========================================================================
+# ANUNCIOS DE TWITCH
+# ===========================================================================
+# Variables disponibles:
+# - {streamer}: Nombre del streamer de Twitch
+# - {streamTitle}: Título del stream
+# - {streamThumbnail}: Imagen miniatura del stream
+# - {streamGameIcon}: Arte o ícono del juego
+# - {streamURL}: URL de Twitch del stream
+# - {streamerIcon}: Foto de perfil del streamer
+# - {viewerCount}: Muestra cuántas personas están viendo el stream
+# - {markdownTitle}: Proporciona un enlace clickeable al stream en formato de título
+
+Twitch:
+  Enabled: false # ¿Activar anuncios de Twitch?
+  ClientID: "CLIENT_ID" # Tu ID de cliente de Twitch
+  ClientSecret: "CLIENT_SECRET" # Tu secreto de cliente de Twitch
+  AnnouncementChannelID: "CHANNEL_ID" # Canal de Discord para anuncios de streams
+  roleRequired: "ROLE_ID" # Rol requerido para usar comandos de Twitch
+  AssignRole: "ROLE_ID" # Rol que se asigna cuando el usuario está en vivo
+
+Streamers:
+  Default: # Configuración por defecto (copia y cambia "Default" por el nombre del streamer)
+    Message:
+      Content: "¡{streamer} está en vivo con algo increíble!"
+    Embed:
+      AuthorName: "{streamer}"
+      AuthorIcon: "{streamerIcon}"
+      AuthorURL: "{streamURL}"
+      Title: "¡{streamer} está en vivo!"
+      Description:
+        - "**{markdownTitle}**"
+        - " "
+        - "**Espectadores**"
+        - "{viewerCount}"
+      Image: "{streamThumbnail}"
+      Footer: "Alertas de Twitch | fluxo Bot"
+      FooterIcon: "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMDE3LnBuZw.png"
+      Color: "#1769FF"
+      Thumbnail: "{streamGameIcon}"
+      Components:
+        - Type: "Button"
+          Style: "Link"
+          Link: "{streamURL}"
+          Label: "¡Únete a la diversión!"
+          Emoji: "📗"
+
+  # Agrega más abajo (Copia y pega y cambia "Default" por el nombre del streamer)
+
+# ===========================================================================
+# JUEGOS Y ECONOMÍA
+# ===========================================================================
+Economy:
+  defaultInterestRate: 0.00 # Tasa de interés bancario por defecto
+  interestInterval: ["10:00"] # Hora a la que se aplica el interés
+  administrator: ["ROLE_ID", "ROLE_ID"] # Roles administradores de economía
+
+  Daily: # Recompensa diaria
+    baseAmount: 200 # Cantidad base
+    increasePerDay: 50 # Aumento por día consecutivo
+    maxAmount: 1000 # Cantidad máxima
+  Beg: # Mendigar
+    cooldown: "10m" # Tiempo de espera
+    min: 50 # Mínimo de monedas
+    max: 200 # Máximo de monedas
+  Work: # Trabajar
+    cooldown: "10m"
+    min: 150
+    max: 500
+  Crime: # Crimen (puede dar negativo)
+    cooldown: "10m"
+    min: -300
+    max: 400
+  Blackjack: # Blackjack
+    cooldown: "0" # Sin tiempo de espera
+    winMultiplier: 2.0 # Multiplicador de ganancia
+  Roulette: # Ruleta
+    cooldown: "0"
+    winMultiplier:
+      red: 2 # Multiplicador para rojo
+      black: 2 # Multiplicador para negro
+      green: 14 # Multiplicador para verde
+  Coinflip: # Cara o cruz
+    cooldown: "0"
+  Slot: # Tragamonedas
+    cooldown: "0"
+    multiplier: 4 # Multiplicador de ganancia
+  Roll: # Dado
+    cooldown: "0"
+  Rob: # Robar
+    cooldown: "2h"
+    minBalanceToRob: 200 # Balance mínimo del objetivo para poder robarle
+    percent: "5%" # Porcentaje del balance que se roba
+    maxAmount: "5000" # Máximo que se puede robar
+
+Store: # Tienda
+  Ranks: # Rangos comprables
+    1:
+      Name: "Rango de Ejemplo"
+      Description: "-# Obtén el rol de supporter en nuestro servidor"
+      Price: "10000" # Precio en monedas
+      RoleID: ["ROLE_ID", "ROLE_ID"] # Roles que se otorgan
+      Limit: "1" # Límite de compras por usuario
+    2:
+      Name: "Rango con Booster"
+      Description: "-# Obtén el rol de supporter y un booster de dinero por 1 día."
+      Price: "20000"
+      RoleID: ["ROLE_ID", "ROLE_ID"]
+      Booster: "Money" # Tipo de booster
+      Multiplier: "1.5" # Multiplicador del booster
+      Duration: "24h" # Duración del booster
+      Limit: "1"
+  Boosters: # Boosters comprables
+    1:
+      Name: "Booster de Ejemplo"
+      Description: "-# Aumenta las monedas que puedes ganar por 1 día"
+      Price: "15000"
+      RoleID: ["ROLE_ID", "ROLE_ID"]
+      Booster: "Money"
+      Multiplier: "1.5"
+      Duration: "24h"
+  Items: # Ítems comprables
+    1:
+      Name: "Interés Bancario 0.3%" # Comprar uno mayor sobreescribirá este
+      Description: "-# Aumenta tu interés bancario en 0.3%"
+      Price: "10000"
+      Type: "Interest"
+      Interest: "0.3"
+      Limit: "1" # ¿Cuántos puede comprar el usuario?
+    2:
+      Name: "Interés Bancario 0.5%"
+      Description: "-# Aumenta tu interés bancario en 0.5%"
+      Price: "12000"
+      Type: "Interest"
+      Interest: "0.5"
+      Limit: "1"
+    3:
+      Name: "Interés Bancario 0.8%"
+      Description: "-# Aumenta tu interés bancario en 0.8%"
+      Price: "15000"
+      Type: "Interest"
+      Interest: "0.8"
+      Limit: "1"
+
+  Embed: # Diseño de la tienda
+    Title: "Tienda de {shopName}"
+    Description:
+      - "{itemCount}: {item} ({price} monedas)"
+      - "{description}"
+    Footer:
+      Text: "Página {pageCurrent} de {pageMax}"
+      Icon: ""
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#1769FF"
+    Image: ""
+    Thumbnail: ""
+  Categories: # Categorías de la tienda
+    - "Ranks" # Rangos
+    - "Boosters" # Boosters
+    - "Items" # Ítems

@@ -1,0 +1,1600 @@
+# ===========================================================================
+# fluxo Bot - Configuración de Idioma
+# Si encuentras algún problema, necesitas soporte o tienes una sugerencia para el bot, únete a nuestro servidor de soporte y crea un ticket,
+# http://discord.fluxodevelopment.net
+# ===========================================================================
+
+# ===========================================================================
+# MENSAJES BÁSICOS
+# ===========================================================================
+NoPermsMessage: "No tienes permiso para usar este comando."
+SuccessEmbedTitle: "Exitoso"
+ErrorEmbedTitle: "Ha ocurrido un error"
+
+# ===========================================================================
+# MENSAJES DEL COMANDO AYUDA
+# ===========================================================================
+HelpCommand:
+  MainEmbed:
+    Title: "Bienvenido al Menú de Ayuda de {botName}"
+    Description:
+      - "Por favor selecciona una categoría del menú desplegable para ver los comandos disponibles."
+    Footer:
+      Text: "fluxo Bot"
+      Icon: ""
+    Author:
+      Text: "{user}"
+      Icon: "{user-avatar}"
+    Color: "#1769FF"
+    Image: ""
+    Thumbnail: "{guild-avatar}"
+
+  CategorySelectPlaceholder: "Elige una categoría..."
+  BackButtonLabel: "Volver a categorías"
+
+  Categories:
+    General:
+      Name: "General"
+      Description: "Comandos básicos de uso general"
+      Emoji: "📋"
+    Moderation:
+      Name: "Moderación"
+      Description: "Comandos para la moderación del servidor"
+      Emoji: "🛡️"
+    Fun:
+      Name: "Diversión"
+      Description: "Comandos de diversión y entretenimiento"
+      Emoji: "🎉"
+    Economy:
+      Name: "Economía"
+      Description: "Comandos para administrar tu economía virtual"
+      Emoji: "💰"
+    Utility:
+      Name: "Utilidad"
+      Description: "Herramientas y utilidades útiles"
+      Emoji: "🔧"
+    Uncategorized:
+      Name: "Addon"
+      Description: "Comandos adicionales"
+      Emoji: "❓"
+
+  CategoryEmbed:
+    Title: "Comandos de {category}"
+    Description: []
+    Color: "#5865F2"
+    Footer:
+      Text: "Usa el botón de volver para regresar a la selección de categorías"
+      Icon: ""
+    Author:
+      Text: "Comandos de {botName}"
+      Icon: ""
+
+# ===========================================================================
+# MENSAJES DE CRIPTO
+# ===========================================================================
+Crypto:
+  Embed:
+    Title: "Pago Cripto | {coinType}"
+    Description:
+      - "> Escanea el código QR para realizar un pago,"
+      - "> o usa la dirección de abajo."
+      - " "
+      - "* **Información de Venta**"
+      - "> **Vendedor:** {seller}"
+      - "> **Cliente:** {client}"
+      - "> **Servicio:** {service}"
+      - " "
+      - "* **Información de Billetera**"
+      - "> **Billetera:** `{walletAddress}`"
+      - "> **Monto:** {cryptoAmount} ({currencySymbol}{currencyAmount})"
+    Footer:
+      Text: "fluxo Development | Pagos Cripto"
+      Icon: "https://i.imgur.com/1oVwqr7.png"
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#ADD8E6"
+    Image: ""
+    Thumbnail: "{coinIcon}"
+    Buttons:
+      - Name: "Obtener Dirección de Billetera"
+        Emoji: "📥"
+        Style: "Primary"
+        Type: "PASTE"
+        Link: ""
+      - Name: "Términos de Servicio"
+        Emoji: "📥"
+        Style: "Link"
+        Type: "LINK"
+        Link: "https://google.com"
+      - Name: "Código QR"
+        Emoji: "📥"
+        Style: "Primary"
+        Type: "QR"
+        Link: ""
+
+Wallets:
+  BTC: "Example"
+  LTC: "Example"
+  ETH: "Example"
+
+# ===========================================================================
+# MENSAJES DEL COMANDO BACKUP
+# ===========================================================================
+BackupCreating: "✅ | Creando copia de seguridad, por favor espera..."
+BackupCreatedEmbed: "¡Se ha **creado una copia de seguridad** de este servidor exitosamente!"
+BackupCreatedMsg: "✅ | Se ha creado una copia de seguridad del servidor exitosamente. ¡La información ha sido enviada a tus mensajes directos!"
+BackupWrongUsage: "¡Por favor especifica un ID de copia de seguridad válido!"
+BackupDeleted: "¡Copia de seguridad eliminada exitosamente!"
+BackupNotFound: "¡No se encontró ninguna copia de seguridad con ese ID!"
+BackupLoadWarning: "⚠️ Todos los canales, roles y configuraciones del servidor serán eliminados. ¿Estás seguro de que deseas cargar la copia de seguridad?"
+BackupLoading: "⚠️ Cargando copia de seguridad..."
+BackupLoaded: "¡Copia de seguridad cargada exitosamente!"
+BackupCancelled: "¡Cancelado!"
+BackupEmbedUsage: "Uso"
+BackupCreatedBy: "Creado por:"
+BackupButtonConfirm: "Confirmar"
+BackupButtonCancel: "Cancelar"
+
+# ===========================================================================
+# MENSAJES DE AVATAR + BANNER
+# ===========================================================================
+AvatarSearchedBy: "Buscado por:"
+AvatarClickHere: "Haz clic aquí para ver la imagen"
+
+BannerClickHere: "Haz clic aquí para ver el banner completo"
+BannerSearchedBy: "Banner buscado por"
+NoBannerSet: "Este usuario no tiene un banner configurado."
+
+# ===========================================================================
+# MENSAJES DEL COMANDO MEME
+# ===========================================================================
+MemeViewThread: "Ver hilo"
+
+# ===========================================================================
+# MENSAJES DEL COMANDO CUMPLIDO
+# ===========================================================================
+compliments:
+  messages:
+    - "Eres más útil de lo que crees."
+    - "Tu talento para la bondad no tiene igual."
+    - "Tienes un increíble sentido del humor."
+    - "Sacas lo mejor de las personas."
+    - "Tu perspectiva es muy refrescante."
+    - "Iluminas cualquier lugar."
+    - "Tienes un gran sentido del estilo."
+    - "Tu amabilidad es un bálsamo para todos los que te conocen."
+    - "Eres como un rayo de sol en un día muy nublado."
+    - "Eres muy inteligente."
+    - "Apuesto a que haces el crucigrama con bolígrafo."
+    - "Eres la razón de sonreír de alguien."
+    - "Siempre tienes las mejores ideas."
+    - "Siempre sabes cómo encontrar el lado positivo."
+    - "Todos caen a veces; solo personas como tú se levantan y siguen adelante."
+    - "Eres una vela en la oscuridad."
+    - "Eres un gran ejemplo para los demás."
+    - "Estar contigo es como estar en unas pequeñas vacaciones felices."
+    - "Siempre sabes exactamente qué decir."
+    - "Siempre estás aprendiendo cosas nuevas y mejorando, lo cual es increíble."
+    - "Tu creatividad es contagiosa."
+    - "Tienes una gracia y elegancia natural."
+    - "Tu amabilidad es un tesoro para todos los que te conocen."
+    - "Tienes una ética de trabajo increíble."
+    - "Tu positividad es inspiradora."
+    - "Tienes una manera de mejorar todo."
+    - "Eres más valiente de lo que crees y más fuerte de lo que pareces."
+    - "Eres un verdadero solucionador de problemas, siempre encuentras una salida."
+    - "Tu sonrisa es contagiosa."
+    - "Iluminas cualquier habitación en la que entras."
+    - "Tu energía es contagiosa."
+    - "Tienes un gran sentido del humor que alegra el día de todos."
+    - "Eres increíble en todos los sentidos."
+    - "Tienes un gran corazón."
+    - "Tu pasión por lo que amas es admirable."
+    - "Estás marcando una diferencia en el mundo."
+    - "Eres más divertido que papel de burbujas."
+    - "En una escala del 1 al 10, eres un 11."
+    - "Eres como un soplo de aire fresco."
+    - "Eres la razón de sonreír de alguien."
+    - "Eres mejor que un unicornio porque eres real."
+    - "¿Cómo sigues siendo tan gracioso y haciendo reír a todos?"
+    - "Tienes muy buen gusto en música/libros/películas."
+    - "Tu capacidad para recordar datos curiosos en el momento justo es impresionante."
+    - "Siempre estás aprendiendo cosas nuevas y mejorando, lo cual es increíble."
+    - "Podrías sobrevivir un apocalipsis zombi."
+    - "Eres más divertido que una piscina de bolas llena de dulces."
+    - "Eres la versión más perfecta de ti mismo."
+    - "Tu amabilidad es un bálsamo para todos los que te encuentran."
+
+# ===========================================================================
+# MENSAJES DEL COMANDO CHISTE OSCURO
+# ===========================================================================
+darkjokes:
+  messages:
+    - "Dale un fósforo a un hombre y tendrá calor unas horas. Préndale fuego a un hombre y tendrá calor el resto de su vida."
+    - "Mi esposa y yo hemos tomado la difícil decisión de no querer hijos. Si alguien los quiere, mándame tus datos de contacto y los dejamos mañana."
+    - "¿Qué le regalas a un niño sin brazos en Navidad?\nNada, de todas formas no podría abrirlo."
+    - "Le quité la silla de ruedas a mi ex novia.\nAdivina quién vino arrastrándose de vuelta."
+    - "¿Cuándo se convierte un chiste en chiste de papá?\nCuando se va y nunca regresa."
+    - "¿Pueden los huérfanos comer en un restaurante familiar?"
+    - "Un hombre entró a una biblioteca y pidió un libro sobre cómo suicidarse. El bibliotecario dijo: 'Ni lo sueñes, no lo vas a devolver.'"
+    - "Mi abuela con Alzheimer solía contarnos un chiste.\nDecía 'Toc toc', le decíamos '¿Quién es?'\nLuego decía 'No me acuerdo'… y empezaba a llorar."
+    - "¿Por qué los huérfanos no pueden jugar béisbol?\nNo saben dónde está el hogar."
+    - "¿A dónde fue Suzy después de perderse en un campo minado?\n¡A TODAS PARTES!"
+    - "Llevo dos años buscando al asesino de mi ex novia. Pero nadie quiere hacerlo."
+    - "¿Cuáles fueron las últimas palabras de Stephen Hawking?\nEl sonido de cierre de Windows XP."
+    - "Cuando chocas un tope en una zona escolar y recuerdas que no hay topes."
+    - "Dos niños estaban golpeando a un chico en un callejón, así que intervine. No tuvo ninguna oportunidad contra los tres."
+    - "Mi ex tuvo un accidente terrible. Le dije a los médicos el tipo de sangre equivocado. Ahora sí sabrá lo que es el rechazo."
+    - "Cuando Jim estaba jugando con su celular, mi abuelo le dijo: '¡Usas demasiada tecnología!'. Jim respondió: '¡No, TÚ usas demasiada tecnología!' y desconectó el soporte vital del abuelo."
+    - "Siempre recordaré las últimas palabras de mi abuelo: ¡Para de sacudir la escalera!"
+    - "¿Te gustaría probar comida africana?\nA ellos también les gustaría."
+    - "Los niños en el asiento trasero causan accidentes y los accidentes en el asiento trasero causan niños."
+    - "¿Qué haces cuando terminas una revista en el hospital? Recargas y sigues disparando."
+    - "¿Cómo organizas una fiesta sorpresa en un hospital?\nLleva una luz estroboscópica a la sala de epilepsia."
+    - "¡Tengo un pez que sabe breakdance! Solo por 20 segundos, y solo una vez."
+    - "¿Qué es lo último que pasa por la cabeza de una mosca al golpear el parabrisas de un auto a 100 km/h?\nSu trasero."
+    - "Mi papá murió porque no recordábamos su tipo de sangre. Mientras moría, insistía en que fuéramos 'positivos', pero es difícil sin él."
+    - "No necesitas paracaídas para hacer paracaidismo.\nNecesitas paracaídas para hacer paracaidismo dos veces."
+    - "Mi novia, aficionada a la astronomía, me preguntó cómo mueren las estrellas. 'Generalmente de sobredosis', le dije."
+    - "Mis parientes mayores solían bromear conmigo en las bodas diciendo '¡Tú sigues!' Dejaron de hacerlo cuando empecé a hacer lo mismo en los funerales."
+    - "Mi esposa y yo tomamos la difícil decisión de no querer hijos.\nSi alguien los quiere, mándame tus datos y los dejamos mañana."
+    - "Quiero morir tranquilamente en mi sueño, como mi abuelo.\nNo gritando como los pasajeros de su auto."
+    - "Empecé a llorar cuando papá cortaba cebollas. Cebollas era un perro tan bueno."
+    - "Si a la primera no lo logras… el paracaidismo definitivamente no es para ti."
+    - "Dicen que en cada grupo de amigos hay alguien capaz de matar.\nSospechaba que era Dave, así que lo maté antes de que causara daño."
+    - "Nunca olvidaré las últimas palabras de mi abuelo justo antes de morir. '¿Sigues sujetando la escalera?'"
+    - "¿Qué es amarillo y no sabe nadar? Un autobús lleno de niños."
+    - "El médico me dio un año de vida, así que le disparé. El juez me dio 15 años. Problema resuelto."
+    - "De niños le teníamos miedo a la oscuridad.\n¡Pero de adultos, la factura de la luz nos hace tenerle miedo a la luz!"
+    - "Paciente: Doctor, estoy muy nervioso. Es mi primera operación.\nDoctor: No te preocupes. La mía también."
+    - "Odio cómo los funerales siempre son a las 9 de la mañana. No soy una persona mañanera de luto."
+    - "¿Por qué los amigos son como la nieve? Si les haces pipí encima, desaparecen."
+    - "Mi terapeuta dice que tengo una preocupación por la venganza. Ya veremos."
+    - "Es importante tener buen vocabulario. Si hubiera sabido la diferencia entre 'antídoto' y 'anécdota', uno de mis mejores amigos aún estaría vivo."
+    - "Dicen que eres lo que comes. No recuerdo haber comido una gran decepción."
+    - "¿Por qué no puedes oír a un psiquiatra en el baño? Porque la 'P' es silenciosa."
+    - "Tengo un chiste sobre la economía del goteo. Pero el 99% de ustedes nunca lo entenderá."
+    - "Un nuevo estudio encontró que los humanos comen más plátanos que los monos. No recuerdo la última vez que comí un mono."
+    - "Le dije a mi esposa que abrazara sus errores. Me dio un abrazo."
+    - "Mi esposa dejó una nota en la nevera que decía: 'Esto no funciona, adiós.' La abrí y funciona perfectamente."
+    - "Sabes que no caes bien cuando te dan la cámara cada vez que toman una foto grupal."
+    - "¿Por qué los cementerios nunca se llenan? Porque la gente muere por entrar."
+    - "Tengo un EpiPen. Mi amigo me lo dio cuando se estaba muriendo. Parecía muy importante para él que yo lo tuviera."
+    - "Hoy fue un día terrible. Mi ex fue atropellado por un autobús y perdí mi trabajo como conductor."
+    - "No planeaba salir a correr hoy, pero esos policías aparecieron de la nada."
+    - "Le dije a los paramédicos el tipo de sangre equivocado de mi ex, para que sepa lo que es el rechazo."
+    - "Mi consejero de duelo murió el otro día. Era tan bueno en su trabajo que ni me importa."
+    - "El inventor del autocorrector murió hoy. Su funeral será hola el Domingal."
+    - "Me negué a creer que mi papá robaba en su trabajo de policía de tráfico, pero cuando llegué a casa, todas las señales estaban ahí."
+    - "Dale un fósforo a un hombre y tendrá calor unas horas. Préndale fuego y tendrá calor el resto de su vida."
+
+# ===========================================================================
+# MENSAJES DEL COMANDO DATO
+# ===========================================================================
+
+# ===========================================================================
+# MENSAJES DE JUEGOS
+# ===========================================================================
+Roll: "🎲 ¡Sacaste un ${rollResult}!"
+
+wordSnake:
+  start: "¡Juego de Serpiente de Palabras iniciado! La primera palabra es: `${word}`. La siguiente palabra debe comenzar con la letra `${letter}`."
+  invalidWord: "¡Palabra inválida! Recuerda, la palabra debe comenzar con la letra `${letter}`."
+  timeUp: "¡Se acabó el tiempo! La última palabra fue `${lastWord}`. El juego terminó y el puntaje final es `${score}`."
+  gameOver: "¡El juego terminó! Puntaje final: `${score}`."
+
+Hangman:
+  commandDescription: "¡Juega al Ahorcado!"
+  activeGameWarning: "Ya tienes un juego activo. Por favor termínalo antes de iniciar uno nuevo."
+  gameStartMessage: "Iniciando juego de Ahorcado... ¡Escribe tus intentos!"
+  winMessage: "¡Felicitaciones, {username}! ¡Ganaste!"
+  gameOverMessage: "¡Juego terminado! La palabra era: {word}"
+  continueMessage: "¡Sigue adivinando!"
+  words:
+    - Océano
+    - Pirata
+    - Castillo
+    - Arcoíris
+    - Bosque
+    - Dragón
+    - Música
+    - Galleta
+    - Calabaza
+    - Linterna
+    - Sombra
+    - Cometa
+    - Vela
+    - Guitarra
+    - Rompecabezas
+    - Delfín
+    - Cohete
+    - Mago
+    - Caballero
+    - Circo
+    - Discord
+    - fluxo
+    - Aventura
+    - Globo
+    - Bicicleta
+    - Mariposa
+    - Fogata
+    - Chocolate
+    - Dinosaurio
+    - Elefante
+    - Fuegos
+    - Galaxia
+    - Gema
+    - Helicóptero
+    - Iglú
+    - Medusa
+    - Caleidoscopio
+    - Faro
+    - Meteoro
+    - Collar
+    - Pulpo
+    - Pintura
+    - Arenas
+    - Robot
+    - Nave
+    - Tesoro
+    - Unicornio
+    - Volcán
+    - Cascada
+    - Xilófono
+    - Yeti
+    - Cebra
+    - Flor
+    - Cañón
+    - Desierto
+    - Enigma
+    - Hada
+    - Jardín
+    - Horizonte
+    - Isla
+    - Malabarista
+    - Cometa
+    - Laberinto
+    - Pradera
+    - Nebulosa
+    - Oasis
+    - Palacio
+    - Quásar
+    - Arrecife
+    - Astronave
+    - Templo
+    - Universo
+    - Vórtice
+    - Silbato
+    - Xenón
+    - Patio
+    - Zepelín
+    - Manzana
+    - Banana
+    - Cereza
+    - Dátil
+    - Higo
+    - Uva
+    - Melón
+    - Jaca
+    - Kiwi
+    - Limón
+    - Mango
+    - Nectarina
+    - Naranja
+    - Papaya
+  embeds:
+    gameTitle: "🔤 Juego del Ahorcado: {username}"
+    wordToGuess: "Palabra a adivinar"
+    guessesLeft: "Intentos restantes"
+    progress: "Progreso"
+    useChatToGuess: "Usa el chat para adivinar una letra.\nEscribe solo una letra por mensaje."
+    guessFooter: "¡Escribe tu intento en el chat. Los intentos incorrectos reducirán tus intentos restantes!"
+    gameOverTitle: "Juego Terminado"
+    finalWord: "Palabra final:"
+    gameEndMessage: "El juego ha terminado."
+    thanksForPlaying: "¡Gracias por jugar!"
+
+Wordle:
+  Messages:
+    Title: "Wordle"
+    BottomFirst: "Adivina la palabra de 5 letras"
+    BottomLast: "¡Usa el chat para adivinar!"
+    KeepGuess: "¡Sigue adivinando!"
+    GameActive: "¡Ya tienes un juego activo!"
+    LetsPlay: "¡Vamos a jugar Wordle! Intenta adivinar la palabra de 5 letras."
+  Embed:
+    Title: "**Juego Terminado**"
+    Description: "¡Juego terminado! La palabra era {word}"
+    Footer: "¡Gracias por jugar!"
+  words:
+    - Manzana
+    - Pan
+    - Caja
+    - Bebida
+    - Águila
+    - Hielo
+    - Uva
+    - Casa
+    - Ideal
+    - Jugo
+    - Cuchillo
+    - Limón
+    - Mango
+    - Noche
+    - Aceituna
+    - Durazno
+    - Quieto
+    - Río
+    - Piedra
+    - Mesa
+    - Unidad
+    - Vívido
+    - Ballena
+    - Xilófono
+    - Cebra
+
+Connectfour:
+  Title: "¡Es el turno de {user}!"
+  Colors:
+    Win: "#7ff946"
+    Lose: "#df3e3e"
+    Tie: "#ffffff"
+  Embed:
+    Title: "**Juego Terminado**"
+    Description: "¡{user} ha ganado!"
+    Footer: "¡Gracias por jugar!"
+  Board:
+    Emojis:
+      Player: "🔴"
+      Bot: "🟡"
+      Blank: "⬛"
+      1: "1️⃣"
+      2: "2️⃣"
+      3: "3️⃣"
+      4: "4️⃣"
+      5: "5️⃣"
+      6: "6️⃣"
+      7: "7️⃣"
+  Buttons:
+    Style: "Secondary"
+    Numbers:
+      1:
+        Text: ""
+        Emoji: "1️⃣"
+      2:
+        Text: ""
+        Emoji: "2️⃣"
+      3:
+        Text: ""
+        Emoji: "3️⃣"
+      4:
+        Text: ""
+        Emoji: "4️⃣"
+      5:
+        Text: ""
+        Emoji: "5️⃣"
+      6:
+        Text: ""
+        Emoji: "6️⃣"
+      7:
+        Text: ""
+        Emoji: "7️⃣"
+
+TicTacToe:
+  Board:
+    Emojis:
+      X: "❌"
+      O: "⭕"
+      Blank: "⬛"
+  Colors:
+    Win: '#00FF00'
+    Lose: '#FF0000'
+    Tie: '#FFFF00'
+  Messages:
+    OwnGame: "¡Inicia tu propio juego!"
+    ColumnFull: "Esta columna está llena, prueba otra"
+    Win: "## **¡Bien hecho {user}! ¡Ganaste!**"
+    Tie: "## **¡Es un empate {user}!**"
+    Lost: "## **Lo siento {user}, ¡perdiste!**"
+    Columns: "Números de columna. Usa los botones de abajo para hacer un movimiento."
+    GameOver: "Juego Terminado"
+    ThanksForPlaying: "¡Gracias por jugar!"
+
+RockPaperScissors:
+  Messages:
+    RockPaperScissors: "**Piedra Papel Tijeras**"
+    YourChoice: "## Elegiste **{userChoice}** y el bot eligió **{botChoice}**."
+    Win: "## **¡Bien hecho {user}! ¡Ganaste!**"
+    Tie: "## **¡Es un empate {user}!**"
+    Lost: "## **Lo siento {user}, ¡perdiste!**"
+    GameEnded: "¡Juego terminado!"
+    ThanksForPlaying: "¡Gracias por jugar!"
+    CantPlaySomeoneElsesGame: "¡No puedes jugar el juego de otra persona!"
+  Embed:
+    Color: "#000000"
+    Title: "👊 Piedra Papel Tijeras"
+    Description: "**¡Vamos a jugar! Elige tu arma abajo:**"
+    Fields:
+      Rock:
+        Name: "Piedra"
+        Value: "🪨"
+      Paper:
+        Name: "Papel"
+        Value: "📰"
+      Scissors:
+        Name: "Tijeras"
+        Value: "✂️"
+    Footer:
+      Text: "¡Haz tu elección!"
+    Buttons:
+      Rock:
+        Style: "Secondary"
+        Text: "Piedra"
+        Emoji: "🪨"
+      Paper:
+        Style: "Secondary"
+        Text: "Papel"
+        Emoji: "📰"
+      Scissors:
+        Style: "Secondary"
+        Text: "Tijeras"
+        Emoji: "✂️"
+
+# ===========================================================================
+# MENSAJES DEL COMANDO SNIPE
+# ===========================================================================
+SnipeNoMsg: "No hay mensajes para recuperar en este canal."
+ErrorGeneric: "Lo siento, hubo un error con el comando."
+
+# ===========================================================================
+# MENSAJES DEL SISTEMA DE SORTEOS
+# ===========================================================================
+Giveaways:
+ EntrySuccessMessage: "🎉 ¡Te has inscrito exitosamente al sorteo organizado por {hostedBy}!"
+ LeaveSuccessMessage: "👋 Has salido del sorteo exitosamente."
+ EntryErrorMessage: "Ocurrió un error al intentar inscribirte al sorteo. Por favor contacta a fluxo Development."
+ CheckChance: "{user} tienes un {percent}% de probabilidad de ganar este sorteo. ({entries} participaciones)"
+ GiveawayNotFound: "Sorteo no encontrado o puede haber sido eliminado..."
+ GiveawayAlreadyEnded: "El sorteo ya ha terminado."
+ GiveawayHasntEnded: "El sorteo aún no ha terminado."
+ WinMessage: "¡Felicitaciones a los ganadores del sorteo de **{prize}**! {winners}"
+ WinRerollMessage: "¡Sorteo re-realizado! ¡Felicitaciones a los nuevos ganadores del sorteo de **{prize}**! {winners}"
+ WinnerDirectMessage: "¡Felicitaciones, ganaste el sorteo de **{prize}**! Por favor abre un ticket en el servidor de **{serverName}**. {channel}"
+ NoParticipationMessage: "Sin ganadores, nadie se inscribió al sorteo de {prize}."
+ IncorrectRoleMessage: "¡No tienes el rol requerido para unirte al sorteo de {prize}!"
+ IncorrectMinimumAccountAgeMessage: "¡Tu cuenta no es lo suficientemente antigua para participar en el sorteo de {prize}!"
+ IncorrectMinimumServerJoinDateMessage: "¡No llevas suficiente tiempo en el servidor de {serverName} para participar en el sorteo de {prize}!"
+ AlreadyEnteredMessage: "¡Ya estás inscrito en el sorteo de {prize}!"
+ IncorrectInviteCountMessage: "Necesitas al menos {minInvites} invitaciones para participar en este sorteo."
+
+ Embeds:
+  ActiveGiveaway:
+    Prize: "## ¡Sorteo de {prize} x{winnerCount}!"
+    HostedByField: "Organizado por:"
+    EndsInField: "Termina en:"
+    EntriesField: "Participantes:"
+    WhitelistRoleField: "Quién puede participar"
+    BlacklistRoleField: "Quién no puede participar"
+    MinimumSeverJoinDateField: "Fecha mínima de ingreso al servidor"
+    MinimumAccountAgeField: "Edad mínima de cuenta"
+
+  EndedGiveaway:
+    Title: "## ¡El sorteo de {prize} ha terminado!"
+    WinnersField: "Ganadores:"
+    EntriesField: "Participantes:"
+
+# ===========================================================================
+# MENSAJES DEL COMANDO AFK
+# ===========================================================================
+AFK:
+ Success: "Estado AFK configurado"
+ ErrorMessges:
+   NoPermission: "No tienes permiso para usar el comando AFK."
+   NickNameMissingPermissions: "No se pudo cambiar el apodo por falta de permisos."
+   NickNameOwner: "Tu estado AFK está configurado, pero no puedo cambiar tu apodo porque eres dueño del servidor."
+   AlreadyMarkedAFK: "¡Ya estás marcado como AFK!"
+   TimeFormat: "Formato de tiempo inválido. Por favor usa el formato: 1s (segundos), 1m (minutos), 1h (horas), 1d (días)"
+   TimeParseError: "No se pudo procesar el tiempo ingresado. Por favor asegúrate de que esté en el formato correcto."
+   RoleCreate: "Hubo un error al crear el rol AFK. Por favor verifica mis permisos."
+
+# ===========================================================================
+# MENSAJES DE VERIFICACIÓN
+# ===========================================================================
+Verify:
+  Required: "Verificación Requerida"
+  QuestionFormat: "¿Cuánto es {num1} {operator} {num2}? ¡Responde rápido!"
+  AlreadyVerified: "¡Ya estás verificado!"
+  Success: "¡Te has verificado exitosamente!"
+  Timeout: "Te tardaste demasiado en verificarte. Por favor intenta de nuevo."
+  Incorrect: "Incorrecto, intenta de nuevo."
+  NoRole: "El rol de no verificado configurado en el servidor no existe. Por favor contacta al administrador del servidor."
+  Error: "Hubo un error al verificar tu cuenta. Por favor contacta al staff del servidor."
+
+# ===========================================================================
+# MENSAJES DE TABLA DE CLASIFICACIÓN Y NIVELES
+# ===========================================================================
+Leaderboard:
+  Balance:
+    Top: "🏆 Tabla de Clasificación - Balance"
+    Footer: "Página {pageMin}/{pageMax} • Actualizado a las {time}"
+    Messages: "{count} 🪙"
+  Levels:
+    Top: "🏆 Tabla de Clasificación - Niveles"
+    Footer: "Página {pageMin}/{pageMax} • Actualizado a las {time}"
+    Messages: "Nivel {count_level}, XP {count_xp}"
+  Messages:
+    Top: "🏆 Tabla de Clasificación - Mensajes"
+    Footer: "Página {pageMin}/{pageMax} • Actualizado a las {time}"
+    Messages: "{count} mensajes"
+  Invites:
+    Top: "🏆 Tabla de Clasificación - Invitaciones"
+    Footer: "Página {pageMin}/{pageMax} • Actualizado a las {time}"
+    Messages: "{count} invitaciones"
+  Error: "Ocurrió un error al obtener la tabla de clasificación de {guild}."
+  Button:
+    Previous: "Anterior"
+    Next: "Siguiente"
+  Embed:
+    Colour: "#000000"
+
+Levels:
+  NoPermission: "Acceso denegado. No tienes los permisos necesarios para modificar XP o niveles."
+  DataNotFound: "No se encontraron registros para {user}. Por favor asegúrate de que el usuario exista en el sistema."
+  CurrentLevelAndXP: "{user} está actualmente en el nivel {level}, con un total de {xp} XP."
+  UpdatedXP: "El XP de {user} ha sido actualizado exitosamente a {xp}."
+  UpdatedLevel: "El nivel de {user} ha sido actualizado exitosamente a {level}."
+  UpdatedXPAndLevel: "El XP y nivel de {user} han sido actualizados a {xp} y {level} respectivamente."
+
+  LevelMessages:
+    - "¡{user}, acabas de subir al nivel {newLevel}! ¡Parece que todas esas sesiones nocturnas en Discord valieron la pena! 🎉"
+    - "{user}, ¡felicidades por llegar al nivel {newLevel}! Tu dedicación a la procrastinación es verdaderamente inspiradora. 😅"
+    - "¡{user} ahora está en el nivel {newLevel}! Imagina lo que podrías lograr si aplicaras esta dedicación en otro lugar. 😂"
+    - "🚨 ¡Alerta! ¡{user} ha alcanzado el nivel {newLevel}! Por favor envíen snacks y bebidas energéticas para seguir subiendo. 🍕🥤"
+    - "¡Ding! ¡{user} subió al nivel {newLevel}! Parece que tanto farming de XP valió la pena, más o menos. 🤔"
+    - "¡{user} llegó al nivel {newLevel}! ¡Hora de tomar una captura de pantalla y ponerla como banner de perfil! 📸"
+    - "Vaya {user}, llegaste al nivel {newLevel}. ¡Tu teclado debe estar muy orgulloso! ⌨️👏"
+    - "¡Nivel {newLevel} alcanzado por {user}! ¡Sigue adelante! 🚀"
+    - "🎉 ¡Felicidades {user}! ¡Has subido al nivel {newLevel}! ¡Mantén ese impulso! ⚡️"
+    - "🌟 ¡{user} acaba de llegar al nivel {newLevel}! ¡Próxima parada, dominación mundial! 🗺️"
+    - "🥳 ¡{user}, alcanzaste el nivel {newLevel}! ¡Tus amigos de {guildName} están aplaudiendo por ti! 🎊"
+    - "📈 ¡Nivel {newLevel} desbloqueado por {user}! ¡El esfuerzo es real, pero también las recompensas! 💪"
+    - "✨ ¡Boom! ¡{user} está ahora en el nivel {newLevel}! ¡Hora de presumir esos nuevos poderes! 💥"
+    - "🏆 ¡{user}, llegaste al nivel {newLevel}! ¡{guildName} está orgulloso de tenerte!"
+    - "🎊 ¡Felicitaciones {user}! ¡El nivel {newLevel} te queda bien! ¡Sigue con el gran trabajo! 🌟"
+    - "💪 ¡{user} ha subido al nivel {newLevel}! ¡Todo ese esfuerzo definitivamente está dando frutos! 🎉"
+    - "🔥 ¡{user} alcanzó el nivel {newLevel}! ¡Mantén el fuego encendido y apunta a las estrellas! 🚀"
+    - "🎯 ¡{user} ahora está en el nivel {newLevel}! ¡Tu determinación es impresionante! ¡Sigue así! 🏆"
+    - "🚀 ¡{user}, bienvenido al nivel {newLevel}! ¡Tu viaje apenas comienza! ¡La aventura te espera! 🌟"
+    - "😂 ¡{user}, subiste al nivel {newLevel}! ¡Tómate un descanso, tu silla necesita uno! 🪑"
+    - "👏 ¡{user} llegó al nivel {newLevel}! ¿Hay una medalla para esto? ¡Porque te la mereces! 🥇"
+    - "😜 ¡Nivel {newLevel} para {user}! ¿Recuerdas cuando pensabas que esto era imposible? ¡Mírate ahora!"
+    - "🤣 ¡{user} acaba de subir al nivel {newLevel}! No olvides salir a tomar aire de vez en cuando. El sol te extraña. 🌞"
+    - "🔥 ¡{user} alcanzó el nivel {newLevel}! Tu teclado llamó, quiere unas vacaciones. ✈️"
+    - "💡 ¡{user}, llegaste al nivel {newLevel}! Quizás ahora sea un buen momento para aprender algo útil... o no. 🤷‍♂️"
+    - "🎉 ¡Felicidades {user}! ¡Nivel {newLevel}! ¿Estás seguro de que no eres un robot? 🤖"
+    - "😂 ¡{user}, en el nivel {newLevel}, pronto necesitarás un mouse nuevo! ¡Sigue así! 🖱️"
+    - "🌟 ¡{user} ahora está en el nivel {newLevel}! Tu mascota debe preguntarse qué estás haciendo. 🐾"
+    - "🥳 ¡{user} alcanzó el nivel {newLevel}! ¡Hora de celebrar con tus amigos virtuales! 🎈"
+    - "🤣 ¡{user} en el nivel {newLevel}! ¿Quizás ahora puedes sacar la basura? 🗑️"
+    - "🚀 ¡{user}, nivel {newLevel} alcanzado! Tu próxima misión: ¡Encontrar una vida fuera de Discord! 🌍"
+    - "🎊 ¡{user}, felicidades por subir al nivel {newLevel}! Sabíamos que podías, más o menos. 😅"
+    - "🔥 ¡{user} ahora está en el nivel {newLevel}! ¡Tu silla gamer debe estar en llamas! 🔥"
+
+# ===========================================================================
+# MENSAJES DE AGREGAR/QUITAR ROL
+# ===========================================================================
+AddRole:
+  AddroleSelfRole: "No puedes agregarte un rol a ti mismo."
+  AddroleHighestRole: "El rol seleccionado es mayor que mi rol más alto."
+  AddroleUserRoleNotAbove: "No puedes agregar un rol mayor o igual a tu rol más alto."
+  AddroleAlreadyHave: "El usuario ya tiene este rol."
+  AddroleSuccess: "Se agregó {role} a {user} exitosamente"
+  AddroleError: "Hubo un error al agregar el rol."
+  RoleAllUserHighestRole: "No puedes asignar un rol que sea mayor o igual a tu rol más alto."
+
+RoleAll:
+  RoleAllConfirmationAdd: "¿Estás seguro de que quieres agregar el rol {role} a todos los usuarios?"
+  RoleAllConfirmationRemove: "¿Estás seguro de que quieres quitar el rol {role} a todos los usuarios?"
+  RoleAllHighestRole: "El rol seleccionado es mayor o igual al rol más alto del bot. Acción no permitida."
+  RoleAllUserHighestRole: "El rol seleccionado es mayor o igual a tu rol más alto. Acción no permitida."
+  RoleAllSuccessAdd: "Se agregó el rol {role} a todos los usuarios exitosamente."
+  RoleAllSuccessRemove: "Se quitó el rol {role} a todos los usuarios exitosamente."
+  RoleAllError: "Ocurrió un error al agregar/quitar el rol."
+  RoleAllCancelled: "La acción ha sido cancelada."
+  RoleAllTimeOut: "El comando expiró. No se tomó ninguna acción."
+
+Temprole:
+  SameOrHigherRoleError: "No puedes asignar roles que sean del mismo rango o mayor que tu rol más alto actual."
+  InvalidDurationFormat: "Formato de duración inválido. Por favor usa formatos como 1h, 15m, 1d, etc."
+  RoleAssigned: "Rol temporal {role} asignado a {user} por {duration}."
+  ErrorAssigningRole: "Hubo un error al asignar el rol temporal."
+  MissingPermissionsError: "El bot no tiene permisos suficientes para asignar este rol."
+  UnknownRoleError: "El rol especificado es inválido o desconocido. Por favor especifica un rol válido."
+
+# ===========================================================================
+# MENSAJES DE HISTORIAL/LIMPIAR HISTORIAL
+# ===========================================================================
+History:
+  HistoryEmbedTitle: "Historial de Usuario de {user-tag}"
+  HistoryEmbedUserInfo: "👤 Información del Usuario"
+  HistoryEmbedName: "Nombre"
+  HistoryEmbedJoinedServer: "📆 Se Unió al Servidor El"
+  HistoryTotalMessages: "💌 Total de Mensajes"
+  HistoryEmbedNote: "📝 Nota"
+  HistoryEmbedWarnings: "⚠️ Advertencias"
+  HistoryEmbedTimeouts: "⏲️ Silencios"
+  HistoryEmbedKicks: "👢 Expulsiones"
+  HistoryEmbedBans: "🔨 Baneos"
+
+ClearhistorySuccess: "¡Se limpió el historial de {user} exitosamente!"
+
+# ===========================================================================
+# MENSAJES DEL COMANDO ENCUESTA
+# ===========================================================================
+PollEmbedTitle: "¡Se ha iniciado una encuesta!"
+PollEmbedFooter: "Encuesta iniciada por:"
+
+# ===========================================================================
+# MENSAJES DEL COMANDO PURGAR
+# ===========================================================================
+Purge:
+  NoPermsMessage: "No tienes permiso para purgar mensajes."
+  PurgeCleared: "{amount} mensajes han sido purgados exitosamente."
+  PurgeOld: "Error: No se pueden purgar mensajes de más de 14 días."
+  ModerationEmbedTitle: "Acción de Moderación"
+  ModerationEmbedAction: "Acción: Purgar"
+  ModerationEmbedDetails: "Staff: <@{user-id}>\nCantidad: {amount}\nCanal: {channel}"
+
+# ===========================================================================
+# MENSAJES DEL COMANDO MODO LENTO
+# ===========================================================================
+SlowmodeReset: "El modo lento de este canal ha sido restablecido."
+SlowmodeFailed: "No se pudo configurar el modo lento en este canal, verifica la duración."
+SlowmodeSuccess: "El modo lento de este canal ha sido configurado a **{time}** segundos."
+
+# ===========================================================================
+# MENSAJES DE ANTI-HOIST
+# ===========================================================================
+AntiHoist:
+  NoPermission: "No tienes permiso para usar el comando antihoist."
+  CommandCompleted: "Comando antihoist ejecutado exitosamente."
+  NotifyUserMessage: "¡Hola {user}! Tu nombre de usuario ha sido cambiado de `{oldDisplayName}` a `{newDisplayName}` en **{guildName}** porque no se permite el hoisting de nombres."
+
+# ===========================================================================
+# MENSAJES DEL COMANDO ADVERTENCIA
+# ===========================================================================
+Unwarn:
+  NoPermission: "No tienes permiso para usar este comando."
+  NoWarnings: "No se encontraron advertencias para este usuario."
+  InvalidWarningID: "ID de advertencia inválido."
+  WarningRemoved: "Advertencia eliminada de {userTag}: `{reason}`."
+  Error: "Ocurrió un error al procesar tu solicitud."
+
+Warn:
+  BotOrSelf: "No puedes advertir a un bot o a ti mismo."
+  Success: "El usuario {userTag} ha sido advertido por la siguiente razón: {reason}"
+  Error: "Hubo un error al intentar advertir a este usuario."
+
+# ===========================================================================
+# MENSAJES DEL COMANDO RECORDATORIO
+# ===========================================================================
+Reminder:
+  Messages:
+    invalid_mentions: "Tu mensaje contiene menciones no permitidas. Por favor elimina cualquier mención a `@everyone`, `@here` o roles."
+    invalid_format: "Por favor usa un formato válido como '10m', '1h', '2d'."
+    permission_denied: "No tienes permiso para configurar recordatorios para otros usuarios."
+  Embeds:
+    Reminder:
+      Title: "Recordatorio Configurado Exitosamente"
+      Description:
+        - "Recordatorio configurado para **{user}** en **{time}**."
+      Footer:
+        Text: "fluxo Development | Sistema de Recordatorios"
+        Icon: "https://i.imgur.com/1oVwqr7.png"
+      Author:
+        Text: ""
+        Icon: ""
+      Color: "#00FF00"
+      Image: ""
+      Thumbnail: ""
+    DM:
+      Title: "🔔 ¡Recordatorio!"
+      Description: "{message}"
+      Footer:
+        Text: "Hora del recordatorio"
+        Icon: "https://i.imgur.com/yygn7ni.png"
+      Author:
+        Text: ""
+        Icon: ""
+      Color: "#0099FF"
+      Image: ""
+      Thumbnail: ""
+
+# ===========================================================================
+# MENSAJES DE MÚSICA
+# ===========================================================================
+Music:
+  NoPermission: "No tienes permiso para usar el comando de música."
+  Error: "Algo salió mal."
+  NotInVoiceChannel: "Debes estar en un canal de voz para usar el comando de música."
+  NotInSameVoiceChannel: "Debes estar en el mismo canal de voz para usar el comando de música."
+  AddedToQueue: "Pista agregada a la cola."
+  QueryNotFound: "No se encontraron resultados para tu búsqueda."
+  NoMusicInQueue: "No hay música en la cola."
+  QueueCleared: "¡Cola limpiada!"
+  NoPreviousMusic: "No hay música anterior a la que volver."
+  NoMusicPlaying: "No hay música reproduciéndose actualmente."
+  Stopped: "Toda la música ha sido detenida exitosamente."
+  AddingTrack: "Agregando pista a la cola"
+  Skipped: "**{title}** omitido."
+  NothingToSkip: "No hay nada que omitir."
+  Paused: "**{title}** pausado."
+  AlreadyPaused: "**{title}** ya está pausado."
+  Resumed: "**{title}** reanudado."
+  AlreadyResumed: "**{title}** ya está reanudado."
+  Seeked:
+   Success: "Avanzado a **{time}** en la pista."
+   Error: "No se pudo avanzar a la posición **{time}** en la pista."
+  WentBackATrack: "Volvió a la pista anterior."
+  Looping:
+   Off: "El bucle ahora está **{state}**."
+   Track: "Modo de bucle: **{state}**."
+   Queue: "Modo de bucle: **{state}**."
+   Autoplay: "Modo de bucle: **{state}**."
+  Move:
+   InvalidPosition: "Posición de pista o posición de movimiento inválida."
+   Success: "**{track}** movido a la posición **{newPosition}** en la cola."
+   Error: "Ocurrió un error al intentar mover **{track}**."
+  Filters:
+   EmbedError: "Ocurrió un error al intentar mostrar el embed de filtros."
+   Fields:
+    Enabled: "Activado"
+    Disabled: "Desactivado"
+  NowPlaying:
+    GeneratingError: "Error al generar la imagen de reproducción actual."
+  Volume:
+    Success: "Volumen configurado a {volume}%"
+    Error: "No se pudo configurar el volumen. Por favor intenta de nuevo."
+
+# ===========================================================================
+# MENSAJES DE TICKETS
+# ===========================================================================
+Tickets:
+  WorkingHours: "Este ticket se ha abierto fuera del horario laboral. Por favor, espere a que se reanuden nuestros horarios de trabajo.\nNuestro horario de trabajo es de {workinghours_start} a {workinghours_end}."
+  Deleting: "Este ticket se está eliminando..."
+  Deletion: "El ticket será eliminado ahora."
+  DeleteCountDown: "Este ticket se eliminará en {time} segundos."
+  Archive: "Este ticket se está archivando..."
+  Closed: "Este ticket ya ha sido cerrado."
+  TicketTypePlaceholder: "Selecciona un tipo de ticket"
+  AlreadyOpen: "¡Ya tienes un ticket abierto! Ciérralo antes de abrir otro."
+  CloseTicketButton: "Cerrar Ticket"
+  ReviewAlreadySubmitted: "Ya has enviado una reseña para este ticket."
+  ReviewTitle: "Comentarios de Reseña"
+  ReviewPlaceholder: "Por favor, indícanos por qué has dado esta calificación:"
+  ReviewComplete: "¡Gracias por tus comentarios!"
+  TicketReopenTitle: "Ticket Reabierto"
+  TicketReopenDescription: "El ticket ha sido reabierto por <@{userId}>."
+  TicketReopen: "¡Ticket reabierto!"
+  TranscriptTitle: "Transcripción Generada"
+  TranscriptDescription: "La transcripción para el ticket ID {ticketId} ha sido generada por <@{userId}>."
+  TranscriptReady: "Aquí está la transcripción de tu ticket:"
+  TranscriptNotEnough: "No hay suficientes mensajes para generar una transcripción."
+
+  TicketCreated:
+    LinkText: "ir al ticket"
+    Embed:
+      Title: "Ticket Creado"
+      Description:
+        - "Tu ticket ha sido creado. {link}"
+      Footer:
+        Text: ""
+        Icon: ""
+      Author:
+        Text: ""
+        Icon: ""
+      Color: "#00FF00"
+      Image: ""
+      Thumbnail: ""
+    Button:
+      Text: "Ir al Ticket"
+      Emoji: "🟢"
+
+  Blacklisted:
+    Embed:
+      Title: "🚫 Bloqueado para Abrir Tickets"
+      Description:
+        - "Estás en la lista negra para abrir tickets."
+        - "Ponte en contacto con un administrador si deseas apelar la prohibición."
+        - " "
+        - "> **Bloqueado por:** {user}"
+        - "> **Razón:** {reason}"
+        - "> **Bloqueado el:** {time}"
+      Footer:
+        Text: "Contacta con un administrador si crees que esto es un error."
+        Icon: "https://e7.pngegg.com/pngimages/1003/312/png-clipart-hammer-game-pension-review-internet-crouton-hammer-technic-discord-thumbnail.png"
+      Author:
+        Text: ""
+        Icon: ""
+      Color: "#FF0000"
+      Image: ""
+      Thumbnail: ""
+
+# ===========================================================================
+# LOGS DE MODERACIÓN
+# ===========================================================================
+ModerationEmbedTitle: "Acción de Moderación"
+ModerationEmbedAction: "Acción:"
+ModerationEmbedDetails: "Detalles:"
+
+Lockdown:
+  Start: "El servidor ahora está en modo de bloqueo."
+  End: "El bloqueo ha sido levantado."
+  Error: "Se produjo un error al activar/desactivar el modo de bloqueo."
+
+ClearChannel:
+  ClearChannelPrompt: "¿Estás seguro de que quieres limpiar este canal?"
+  ClearChannelCleared: "Este canal fue limpiado por {user}."
+  ClearChannelGif: "https://media1.tenor.com/images/e275783c9a40b4551481a75a542cdc79/tenor.gif?itemid=3429833"
+  CancelClear: "Limpieza del canal cancelada."
+  ClearTimeout: "El canal ha expirado."
+
+Nickname:
+  Description: "Cambiar el apodo de un usuario."
+  UserOptionDescription: "El usuario cuyo apodo quieres cambiar."
+  NicknameOptionDescription: "El nuevo apodo para el usuario."
+  NoPermsMessage: "No tienes permiso para cambiar los apodos."
+  UserNotFound: "El usuario especificado no fue encontrado en el servidor."
+  NicknameChangeSuccess: "Se cambió exitosamente el apodo de {user} a {nickname}."
+  NicknameChangeFailure: "No se pudo cambiar el apodo del usuario. Inténtalo de nuevo más tarde."
+
+Ban:
+  UserNotFound: "No se pudo encontrar el usuario especificado."
+  UserFailedDM: "El usuario ha sido baneado, pero no puedo enviarle mensajes privados porque los tiene desactivados."
+  CantBanSelf: "No puedes banearte a ti mismo."
+  CantBanUser: "No puedo banear a este usuario. Puede que tenga un rol superior al mío o el mismo rol que yo."
+  Success: "Se baneó exitosamente a {userTag} por la razón: {reason}."
+  Error: "Se ha producido un error al intentar banear a este usuario."
+
+TempBan:
+  NoPermsMessage: "No tienes los permisos necesarios para usar este comando."
+  UserNotFound: "No se pudo encontrar el usuario especificado. Por favor verifica el input."
+  InvalidDuration: "Formato de duración inválido. Por favor usa un formato válido como '1d 2h 15m'."
+  CantBanUser: "Este usuario no puede ser baneado. Puede que tenga un rol superior o permisos especiales."
+  Success: "Se baneó temporalmente a {userTag} por {duration}. Razón: {reason}."
+  Error: "Ocurrió un error al intentar banear temporalmente al usuario. Por favor intenta de nuevo más tarde."
+
+Unban:
+  UnbanUserNotBanned: "Este usuario no está baneado actualmente."
+  UnbanMsg: "Se desbaneó a {user} exitosamente."
+  UnbanError: "Ocurrió un error al procesar el desbaneo."
+
+Kick:
+  UserNotFoundInGuild: "Usuario no encontrado en este servidor."
+  CannotKickSelf: "No puedes expulsarte a ti mismo."
+  CannotKickUser: "No se puede expulsar a este usuario."
+  DMFailed: "No se pudo enviar el mensaje directo."
+  KickSuccess: "Se expulsó exitosamente a {userTag} por: {reason}"
+  KickError: "Hubo un error al intentar expulsar a este usuario."
+
+Timeout:
+  NoPermsMessage: "No tienes permiso para usar este comando."
+  UserNotFound: "Usuario no encontrado."
+  InvalidTime: "Tiempo especificado inválido. El tiempo debe ser de al menos 10 segundos o 'perm' para silencio permanente."
+  Success: "Se silenció exitosamente a {user} por {time}. Razón: {reason}"
+  LongMuteSuccess: "Se silenció exitosamente a {user} por {time}. Razón: {reason}"
+  PermanentMuteSuccess: "Se silenció permanentemente a {user}. Razón: {reason}"
+  Error: "Ocurrió un error al intentar silenciar al usuario."
+
+ClearTimeout:
+  NoPermsMessage: "No tienes permiso para usar este comando."
+  UserNotFound: "Usuario no encontrado."
+  TimeoutRemoved: "El silencio ha sido eliminado para {user}."
+  MuteRemoved: "El silencio ha sido eliminado para {user}."
+  Error: "Ocurrió un error al intentar eliminar el silencio."
+
+Removerole:
+  Self: "No puedes quitarte roles a ti mismo."
+  NoRole: "{user} no tiene el rol {role}."
+  AddroleHighestRole: "No puedes modificar un rol mayor o igual a tu rol más alto."
+  Error: "Ocurrió un error al quitar el rol."
+  UserMsg: "Has sido removido del rol **{role}** en {guild-name}"
+  EmbedTitle: "Rol Eliminado"
+  EmbedRemovedBy: "Eliminado por:"
+  EmbedRemovedFrom: "Eliminado de:"
+  EmbedIconURL: "https://i.imgur.com/MdiCK2c.png"
+  RemoveroleNoRole: "{user} no tiene {role}"
+  HigherRoleError: "No puedes quitar un rol mayor o igual a tu rol más alto."
+
+SetNote:
+  NoteLongerThan250: "¡Las notas no pueden tener más de 250 caracteres!"
+  NoteCantAddBot: "¡No puedes agregar una nota a un bot!"
+  NoteSuccess: "Nota agregada exitosamente a **{user}**"
+  NoteError: "Hubo un error al configurar la nota."
+
+AddroleSuccess: "Rol {role} agregado a {user}."
+AddroleError: "Ocurrió un error al agregar el rol."
+
+# ===========================================================================
+# MENSAJES DEL COMANDO 8BALL
+# ===========================================================================
+EightBallQuestion: "Pregunta"
+EightBallAnswer: "Respuesta"
+EightBallReplies: ["Nunca", "Absolutamente", "Absolutamente, también deberías comprar algunas acciones", "Sin duda", "Sí, definitivamente", "Es seguro", "No estoy tan seguro", "Dímelo tú", "No está claro, pregunta de nuevo", "Posible, pero no probable", "Sí", "Mi respuesta es sí", "Por supuesto", "Podría ser", "Negativo", "Muy probablemente", "Tal como lo veo, sí", "No", "Mi respuesta es no", "Veo buenas cosas sucediendo", "Absolutamente no", "Mejor no te lo digo ahora", "Las señales apuntan a sí", "Así es definitivamente"]
+
+# ===========================================================================
+# MENSAJES DEL SISTEMA DE SUGERENCIAS
+# ===========================================================================
+Suggestion:
+  SuggestionCreated: "Sugerencia creada exitosamente."
+  Error: "Ocurrió un error. Por favor contacta al soporte."
+  SuggestionNotFound: "Sugerencia no encontrada."
+  AlreadyVoted: "Ya has votado en esta sugerencia."
+  Upvoted: "¡Has votado a favor de esta sugerencia!"
+  Downvoted: "¡Has votado en contra de esta sugerencia!"
+  AlreadyProcessed: "Esta sugerencia ya ha sido procesada."
+  SuggestionAccepted: "Has aceptado esta sugerencia."
+  SuggestionDenied: "Has rechazado esta sugerencia."
+  ModalTitle: "¡Publica tu sugerencia!"
+  ModalQuestion: "¿Cuál es tu sugerencia?"
+  SuggestionsDisabled: "Las sugerencias están actualmente desactivadas."
+  BlacklistMessage: "Estás en la lista negra y no puedes crear sugerencias."
+  Reason: "No se proporcionó ninguna razón"
+  DirectMessage:
+    Accepted: "¡Tu sugerencia ha sido aceptada!"
+    Denied: "¡Tu sugerencia ha sido rechazada!"
+  Embed:
+    Button:
+      Discuss: "Discutir"
+
+# ===========================================================================
+# COMANDO PERFIL
+# ===========================================================================
+Profile:
+  Embed:
+    Title: ""
+    Description:
+      - "**🔍 Detalles del Miembro**"
+      - "> **📅 Se unió:** {joinDate}"
+      - "> **🏅 Rol más alto:** {role}"
+      - "> **🔖 Apodo:** {nickname}"
+      - " "
+      - "**👤 Detalles del Usuario**"
+      - "> **🆔 ID de Usuario:** {userID}"
+      - "> **💻 Nombre de usuario:** {user}"
+      - "> **📆 Cuenta creada:** {creationDate} ({creationDays})"
+      - "> **🎖️ Insignias:** {badges}"
+      - " "
+      - "**📊 Estadísticas del Usuario**"
+      - "> **🔢 Nivel:** {level}"
+      - "> **🌟 XP:** {xp}"
+      - "> **💬 Total de Mensajes:** {totalMessages}"
+      - "> **🔥 Racha Diaria:** {dailyStreak}"
+      - " "
+      - "**💰 Detalles Financieros**"
+      - "> **💵 Balance:** {balance}"
+      - "> **🏦 Banco:** {bank}"
+      - " "
+      - "**🎒 Inventario**"
+      - "> **📦 Objetos:** {inventoryItems}"
+    Footer:
+      Text: "fluxo Bot | Información de Perfil"
+      Icon: "{guildIcon}"
+    Author:
+      Text: "Perfil de {nickname}"
+      Icon: "{userIcon}"
+    Color: "#1e8fff"
+    Image: ""
+    Thumbnail: "{userIcon}"
+
+# ===========================================================================
+# LOGS
+# ===========================================================================
+RoleAddLogs:
+  Embed:
+    Title: ":arrow_up_down: Cambio de Rol Detectado"
+    Description:
+      - "**👤 Miembro:** {user}"
+      - "**🆕 Rol Agregado:** {addedRoleNames}"
+      - "**📅 Fecha:** {longtime}, {shorttime}"
+    Footer:
+      Text: "🛡️ Acción de Actualización de Rol | fluxoBot"
+      Icon: ""
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#1E90FF"
+    Image: ""
+    Thumbnail: ""
+
+RoleRemoveLogs:
+  Embed:
+    Title: ":arrow_down: Eliminación de Rol Detectada"
+    Description:
+      - "**👤 Miembro:** {user}"
+      - "**❌ Rol Eliminado:** {removedRoleNames}"
+      - "**📅 Fecha:** {longtime}, {shorttime}"
+    Footer:
+      Text: "🛡️ Acción de Actualización de Rol | fluxoBot"
+      Icon: ""
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#FF4500"
+    Image: ""
+    Thumbnail: ""
+
+ChannelCreatedLogs:
+  Embed:
+    Title: ":white_check_mark: Nuevo Canal Creado"
+    Description:
+      - "**👤 Ejecutor:** {executor}"
+      - "**📺 Nombre del Canal:** {channelName}"
+      - "**📅 Fecha:** {longtime}, {shorttime}"
+    Footer:
+      Text: "🔒 Acción de Moderación | fluxoBot"
+      Icon: ""
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#00FF00"
+    Image: ""
+    Thumbnail: ""
+
+ChannelDeletedLogs:
+  Embed:
+    Title: ":no_entry: Canal Eliminado"
+    Description:
+      - "**👤 Ejecutor:** {executor}"
+      - "**📺 Nombre del Canal:** {channelName}"
+      - "**📅 Fecha:** {longtime}, {shorttime}"
+    Footer:
+      Text: "🔒 Acción de Moderación | fluxoBot"
+      Icon: ""
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#FF0000"
+    Image: ""
+    Thumbnail: ""
+
+UserUpdateLogs:
+  Embed:
+    Title: "👥 Apodo Cambiado"
+    Description:
+      - "**👤 Usuario:** {userTag}"
+      - "**🔵 Apodo Anterior:** `{oldNickname}`"
+      - "**🟢 Nuevo Apodo:** `{newNickname}`"
+      - "**📅 Fecha:** {longtime}, {shorttime}"
+    Footer:
+      Text: "🔒 Acción de Moderación | fluxoBot"
+      Icon: ""
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#00FF00"
+    Image: ""
+    Thumbnail: ""
+
+TimeoutLogs:
+  Embed:
+    Title: "🚫 Acción de Silencio | Usuario: {userName}"
+    Description:
+      - "**👤 Usuario:** {user}"
+      - "**🛠️ Moderador:** {moderator}"
+      - "**⏰ Duración:** {duration}"
+      - "**📅 Fecha:** {longtime}, {shorttime}"
+    Footer:
+      Text: "🔒 Acción de Moderación | fluxoBot"
+      Icon: ""
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#FFA500"
+    Image: ""
+    Thumbnail: ""
+
+UntimeLogs:
+  Embed:
+    Title: "✅ Silencio Eliminado | Usuario: {userName}"
+    Description:
+      - "**👤 Usuario:** {user}"
+      - "**🛠️ Moderador:** {moderator}"
+      - "**📅 Fecha:** {longtime}, {shorttime}"
+    Footer:
+      Text: "🔒 Acción de Moderación | fluxoBot"
+      Icon: ""
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#4CAF50"
+    Image: ""
+    Thumbnail: ""
+
+WarnLogs:
+  Embed:
+    Title: "🚫 Acción de Advertencia | Usuario: {userName}"
+    Description:
+      - "**👤 Usuario:** {user}"
+      - "**🛠️ Moderador:** {moderator}"
+      - "**📅 Razón:** {reason}"
+      - "**📅 Fecha:** {longtime}, {shorttime}"
+    Footer:
+      Text: "🔒 Acción de Moderación | fluxoBot"
+      Icon: ""
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#FFA500"
+    Image: ""
+    Thumbnail: ""
+
+WarnList:
+  Embed:
+    Title: "Advertencias de {userName}"
+    Color: "#FFA500"
+    Footer: "Total de Advertencias: {totalWarnings}"
+    Thumbnail: true
+    EntryFormat:
+      - "**{index}.** Razón: {reason}"
+      - "Fecha: {longtime} a las {shorttime}"
+      - "Moderador: <@{moderatorId}>"
+  NoWarnings: "{userName} no tiene advertencias."
+  Error: "Ocurrió un error al recuperar las advertencias."
+
+GuildUpdateLogs:
+  Embed:
+    Title: ":pencil: Nombre del Servidor Cambiado"
+    Description:
+      - "**🔵 Nombre Anterior:** `{oldGuildName}`"
+      - "**🟢 Nuevo Nombre:** `{newGuildName}`"
+      - "**👤 Actualizado por:** {executor}"
+      - "**📅 Fecha:** {longtime}, {shorttime}"
+    Footer:
+      Text: "🔒 Log de Moderación | fluxoBot"
+      Icon: ""
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#00E676"
+    Image: ""
+    Thumbnail: true
+
+MessageDeleteLogs:
+  Embed:
+    Title: ":wastebasket: Mensaje Eliminado"
+    Description:
+      - "**👤 Usuario:** {user}"
+      - "**💬 Mensaje:** `{deletedmessage}`"
+      - "**📺 Canal:** {channel}"
+      - "**📅 Fecha:** {longtime}, {shorttime}"
+    Footer:
+      Text: "🔒 Log de Moderación | fluxoBot"
+      Icon: ""
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#DD2C00"
+    Image: ""
+    Thumbnail: true
+  Attachments: "**Archivos Adjuntos**"
+
+MessageUpdateLogs:
+  Embed:
+    Title: ":pencil: Mensaje Editado"
+    Description:
+      - "**👤 Editor:** {user}"
+      - "**📺 Canal:** {channel}"
+      - "🔵 **Mensaje Original:** `{oldmessage}`"
+      - "🟢 **Mensaje Actualizado:** `{newmessage}`"
+      - "**📅 Fecha:** {longtime}, {shorttime}"
+    Footer:
+      Text: "🔒 Log de Moderación | fluxoBot"
+      Icon: ""
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#FF9800"
+    Image: ""
+    Thumbnail: true
+
+VoiceChannelStreamStart:
+  Embed:
+    Title: ":play_pause: Transmisión Iniciada"
+    Description:
+      - "**👤 Usuario:** {user}"
+      - "**📺 Canal:** {channel}"
+      - "**📅 Fecha:** {longtime}, {shorttime}"
+    Footer:
+      Text: "🔒 Log de Moderación | fluxoBot"
+      Icon: ""
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#00C853"
+    Image: ""
+    Thumbnail: true
+
+VoiceChannelStreamStop:
+  Embed:
+    Title: ":stop_button: Transmisión Finalizada"
+    Description:
+      - "**👤 Usuario:** {user}"
+      - "**📺 Canal:** {channel}"
+      - "**📅 Fecha:** {longtime}, {shorttime}"
+    Footer:
+      Text: "🔒 Log de Moderación | fluxoBot"
+      Icon: ""
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#D50000"
+    Image: ""
+    Thumbnail: true
+
+VoiceChannelJoin:
+  Embed:
+    Title: ":loud_sound: Se Unió a un Canal de Voz"
+    Description:
+      - "**👤 Usuario:** {user}"
+      - "**📺 Canal:** {channel}"
+      - "**📅 Fecha:** {longtime}, {shorttime}"
+    Footer:
+      Text: "🔒 Log de Moderación | fluxoBot"
+      Icon: ""
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#2196F3"
+    Image: ""
+    Thumbnail: true
+
+VoiceChannelLeave:
+  Embed:
+    Title: ":mute: Salió de un Canal de Voz"
+    Description:
+      - "**👤 Usuario:** {user}"
+      - "**📺 Canal:** {channel}"
+      - "**📅 Fecha:** {longtime}, {shorttime}"
+    Footer:
+      Text: "🔒 Log de Moderación | fluxoBot"
+      Icon: ""
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#FF6D00"
+    Image: ""
+    Thumbnail: true
+
+VoiceChannelSwitch:
+  Embed:
+    Title: ":left_right_arrow: Cambio de Canal de Voz"
+    Description:
+      - "**👤 Usuario:** {user}"
+      - "🔵 **Canal Anterior:** {oldChannel}"
+      - "🟢 **Nuevo Canal:** {newChannel}"
+      - "**📅 Fecha:** {longtime}, {shorttime}"
+    Footer:
+      Text: "🔒 Log de Moderación | fluxoBot"
+      Icon: ""
+    Author:
+      Text: ""
+      Icon: ""
+    Color: "#3D5AFE"
+    Image: ""
+    Thumbnail: true
+
+# ===========================================================================
+# ECONOMÍA
+# ===========================================================================
+Economy:
+  Messages:
+    balance: "💼 **Balance de Cuenta**\n\n📂 **Billetera:** {balance} \n🏦 **Banco:** {bank}"
+    otherBalance: "📊 **Detalles de Cuenta**\n\n👤 **Usuario:** {user} \n📂 **Billetera:** {balance} \n🏦 **Banco:** {bank}"
+    topBalances: "🏆 **Top 5 Usuarios:**\n{topUsers}\n\n**Tu Posición:** #{position}"
+    betAmountError: "❌ Cantidad de apuesta inválida o insuficiente. Intenta de nuevo con una cantidad válida."
+    transfer: "🔄 **Detalles de Transferencia** \n\nTransferiste **{amount}** 🪙 a **{target}**. ¡La generosidad es tu segundo nombre!"
+    cannotTransferToSelf: "¿Qué estás intentando? ¡No puedes transferirte dinero a ti mismo!"
+    invalidTransferAmount: "Necesitas transferir más de 0 🪙"
+    withdraw: "🏧 **Detalles de Retiro** \n\n💰 Retiraste **{coins}** 🪙 del banco. ¡Gasta con sabiduría!"
+    deposit: "💸 **Depósito Exitoso**\n\n{user}, ¡depositaste {balance} 🪙 en tu cuenta bancaria! ¿Ahorrando para un día lluvioso?"
+    targetRob: "🥷 **Robo**\n\n🚫 Tu objetivo no tiene suficiente dinero para robar."
+    cooldown: "⏰ **Cooldown del Comando**\n\n⏳ Puedes usar este comando de nuevo <t:{nextUse}:R>. ¡Paciencia, amigo!"
+    noBoosters: "🚫 No tienes boosters activos. ¡Es hora de conseguir algunos!"
+    noMoney: "❌ No tienes suficiente dinero para esta transacción. Revisa tu balance e intenta de nuevo."
+    invalidAmount: "❌ Ingresaste una cantidad incorrecta."
+    noPermission: "🚫 No tienes permiso para usar este comando. ¡Buen intento!"
+    adminGive: "🛠️ **Comando Admin: Dar** \n\nSe dieron exitosamente **{amount}** 🪙 al balance de **{user}**.\n\n📂 **Balance:** {balance}\n🏦 **Banco:** {bank}"
+    adminTake: "🛠️ **Comando Admin: Tomar** \n\nSe tomaron exitosamente **{amount}** 🪙 del balance de **{user}**.\n\n📂 **Balance:** {balance}\n🏦 **Banco:** {bank}"
+    adminSet: "🛠️ **Comando Admin: Establecer** \n\nSe estableció exitosamente el balance de **{user}**. Se agregaron **{amount}** 🪙.\n\n📂 **Balance:** {balance}\n🏦 **Banco:** {bank}"
+    error: "Ocurrió un error inesperado. Por favor intenta de nuevo más tarde."
+    footer: "Balance: {balance} 🪙"
+    transactionLog: "Registro de Transacciones de {user}"
+    gained: "Total Ganado"
+    lost: "Total Perdido"
+    guess: "Intento"
+    result: "Resultado"
+    win: "Ganaste"
+    lose: "Perdiste"
+    rollResult: "Resultado del Dado"
+    outcome: "Resultado"
+    bet: "Tu Apuesta"
+    inventoryCategory: "Selecciona una categoría"
+
+  Games:
+    Blackjack:
+      Title: "♠️ Blackjack - ¡{result}!"
+      Win:
+        - "¡{user}, ganaste en la mesa y obtuviste **{balance}** 🪙! ¡Cha-ching!"
+        - "¡{user}, ganaste y obtuviste **{balance}** 🪙! ¿Te sientes con suerte?"
+        - "¡{user}, la suerte está de tu lado! ¡Te llevaste **{balance}** 🪙!"
+        - "¡Felicitaciones, {user}! ¡Te fuiste con **{balance}** 🪙!"
+      Lose:
+        - "¡{user}, parece que perdiste. Di adiós a **{balance}** 🪙!"
+        - "¡{user}, esto es incómodo... perdiste **{balance}** 🪙. ¡Mejor suerte la próxima!"
+        - "¡{user}, gana la casa! ¡Perdiste **{balance}** 🪙. Auch!"
+        - "Lo siento, {user}. Perdiste **{balance}** 🪙. ¿Intentas de nuevo?"
+      Draw:
+        - "Qué aburrido... Parece que empataron."
+        - "{user}, este juego es un empate. Se te reembolsaron **{balance}** 🪙."
+        - "Es un empate, {user}. Recuperaste tus **{balance}** 🪙."
+        - "¡Empate! Nadie gana esta vez. {user}, recuperas tus **{balance}** 🪙."
+
+    Slots:
+      Title: "🎰 Tragamonedas - ¡{result}!"
+      Win:
+        - "¡{user}, ganaste **{balance}** 🪙. ¡Jackpot!"
+        - "¿Está trucado esto? Ganaste **{balance}** 🪙. ¡Qué suerte!"
+        - "¡{user}, estás en racha! Ganaste **{balance}** 🪙."
+        - "¡Din din din! ¡{user}, diste el jackpot y ganaste **{balance}** 🪙!"
+      Lose:
+        - "Perdiste **{balance}** 🪙. ¡Mejor suerte la próxima!"
+        - "¡{user}, esto es incómodo... perdiste **{balance}** 🪙. ¿Giras de nuevo?"
+        - "¡{user}, las tragamonedas no estaban a tu favor. Perdiste **{balance}** 🪙."
+        - "Mejor suerte la próxima, {user}. Perdiste **{balance}** 🪙."
+
+    Roulette:
+      Title: "🎡 Ruleta - ¡{result}!"
+      Win:
+        - "¡{user}, ganaste **{balance}** 🪙. ¡Bravo!"
+        - "¿Está trucado? Ganaste **{balance}** 🪙. ¡Increíble!"
+        - "¡{user}, diste con el número de la suerte! Ganaste **{balance}** 🪙."
+        - "¡Felicitaciones, {user}! Ganaste **{balance}** 🪙."
+      Lose:
+        - "Perdiste **{balance}** 🪙. ¡Mejor suerte la próxima!"
+        - "¡{user}, esto es incómodo... perdiste **{balance}** 🪙."
+        - "¡{user}, la ruleta no te favoreció. Perdiste **{balance}** 🪙."
+        - "Sin suerte esta vez, {user}. Perdiste **{balance}** 🪙."
+
+    Coinflip:
+      Title: "🪙 Cara o Cruz - ¡{result}!"
+      Win:
+        - "¡{user}, ganaste **{balance}** 🪙! ¡Cara o cruz, lo acertaste!"
+        - "¿Está trucado? Ganaste **{balance}** 🪙. ¡Impresionante!"
+        - "¡{user}, lo adivinaste! ¡Ganaste **{balance}** 🪙!"
+        - "¡Felicidades, {user}! ¡Ganaste **{balance}** 🪙 en el cara o cruz!"
+      Lose:
+        - "Perdiste **{balance}** 🪙. ¡Mejor suerte la próxima!"
+        - "¡{user}, esto es incómodo... perdiste **{balance}** 🪙."
+        - "Qué lástima, {user}. Perdiste **{balance}** 🪙. ¿Intentas de nuevo?"
+        - "Mala suerte, {user}. Perdiste **{balance}** 🪙."
+
+      heads: "Cara"
+      tails: "Cruz"
+
+    Roll:
+      Title: "🎲 Dado - ¡{result}!"
+      Win:
+        - "¡{user}, ganaste **{balance}** 🪙. ¡Bien hecho!"
+        - "¿Está trucado? Ganaste **{balance}** 🪙. ¡Genial!"
+        - "¡{user}, sacaste un ganador! Ganaste **{balance}** 🪙."
+        - "¡Qué dado tan afortunado, {user}! Ganaste **{balance}** 🪙."
+      Lose:
+        - "Perdiste **{balance}** 🪙. ¡Mejor suerte la próxima!"
+        - "¡{user}, esto es incómodo... perdiste **{balance}** 🪙."
+        - "¡{user}, el dado no te favoreció. Perdiste **{balance}** 🪙."
+        - "Sin suerte esta vez, {user}. Perdiste **{balance}** 🪙."
+
+    Crime:
+      Title: "🚨 Crimen - ¡{result}!"
+      Win:
+        - "¡{user}, cometiste el crimen y ganaste **{balance}** 🪙! ¡Qué operador tan hábil!"
+        - "¡Robaste el banco y obtuviste **{balance}** 🪙. Buen botín!"
+        - "¡Éxito! ¡{user}, te escapaste con **{balance}** 🪙!"
+        - "¡{user}, eres un genio del crimen! ¡Robaste **{balance}** 🪙!"
+      Lose:
+        - "Parece que no estás hecho para esta vida... ¡Misión fallida!"
+        - "¡{user} fue arrestado durante un crimen y perdió **{balance}** 🪙. ¡Mejor suerte la próxima!"
+        - "¡Atrapado! {user}, fallaste y perdiste **{balance}** 🪙."
+        - "{user}, el crimen no paga... esta vez. Perdiste **{balance}** 🪙."
+
+    Rob:
+      Title: "🥷 Robo - ¡{result}!"
+      Win:
+        - "¡{user}, robaste exitosamente a {victim} por **{balance}** 🪙. ¡Genio criminal!"
+        - "¡{user}, apuntaste a {victim} por **{balance}** 🪙. ¡Qué atraco!"
+        - "¡Robo exitoso! ¡{user}, tomaste **{balance}** 🪙 de {victim}!"
+        - "¡{user}, ejecutaste el atraco perfecto y obtuviste **{balance}** 🪙!"
+      Lose:
+        - "¡{user}, fallaste al robar a {victim}. ¡Mejor suerte la próxima!"
+        - "¡{user}, esto es incómodo... {victim} logró escapar."
+        - "¡Robo fallido! ¡{user}, {victim} se escapó!"
+        - "{user}, el atraco salió mal. No pudiste robar a {victim}."
+
+    ScratchOff:
+      Title: "Resultado de Raspadito"
+      Win:
+        - "¡Felicitaciones! ¡Ganaste {amount} monedas!"
+        - "¡Estás en racha! ¡Acabas de ganar {amount} monedas!"
+        - "¡Qué suerte! ¡{amount} monedas son tuyas!"
+      Lose:
+        - "¡Mejor suerte la próxima! Perdiste {amount} monedas."
+        - "¡Oh no! No ganaste esta vez."
+        - "Lo siento, perdiste {amount} monedas. ¡Intenta de nuevo!"
+
+  Actions:
+    Beg:
+      Title: "🙇‍♂️ ¡Mendigando!"
+      Messages:
+        - "¡Mendigaste y recibiste **{balance}** 🪙. ¡Todo suma!"
+        - "¡{user}, mendigar es la vida! Obtuviste **{balance}** 🪙."
+        - "¡{user}, tu mendicidad dio frutos! Recibiste **{balance}** 🪙."
+        - "Almas generosas te dieron **{balance}** 🪙, {user}. ¡Sigue así!"
+
+    Daily:
+      Title: "📅 Recompensa Diaria - ¡Reclamada!"
+      Messages:
+        - "{user}, canjeaste tu recompensa diaria y ganaste **{balance}** 🪙.\n\n**Racha:** {streak} día(s)"
+        - "¡Wooooo, ganaste **{balance}** 🪙 de tu recompensa diaria!\n\n**Racha:** {streak} día(s)"
+        - "¡Éxito diario! {user}, recogiste **{balance}** 🪙. ¡Mantén la racha!\n\n**Racha:** {streak} día(s)"
+        - "¡Constante! {user}, ganaste **{balance}** 🪙 de tu recompensa diaria.\n\n**Racha:** {streak} día(s)"
+
+    Work:
+      Title: "💼 Trabajo - ¡Trabajo Completado!"
+      Messages:
+        - "¡{user}, ganaste **{balance}** 🪙 de un duro día de trabajo! ¡Buen trabajo!"
+        - "¡Bien hecho en el trabajo de hoy, {user}! Aquí tienes **{balance}** 🪙."
+        - "¡El trabajo duro paga! ¡{user}, ganaste **{balance}** 🪙!"
+        - "{user}, completaste tu trabajo y recibiste **{balance}** 🪙."
+
+  Other:
+    Boosters:
+      title: "🚀 Tus Boosters Activos"
+      description: "**Booster de {type}** (Multiplicador: **{multiplier}**, Expira: <t:{endTime}:R>)"
+
+    Inventory:
+      empty: "🚫 Tu inventario está vacío. ¡Hora de ir de compras!"
+      noItems: "🚫 No hay objetos para mostrar."
+      redeem: "🎁 Has canjeado: **{item}**"
+      Embed:
+        Title: "Inventario de {category}"
+        Description: ["{itemNum}. **{item}** (x{amount})"]
+        Footer:
+          Text: "Página {pageCurrent} de {pageMax}"
+        Color: "#1769FF"
+
+    Store:
+      purchaseSuccess: "✅ Has comprado exitosamente **{item}**. Tu nuevo balance es **{balance}** 🪙."
+      higherInterestRate: "Ya tienes una tasa de interés mayor o igual."
+      purchaseLimit: "No puedes comprar más de {limit} de {item}."
+      Embed:
+        Title: "Tienda de {shopName}"
+        Description:
+          - "{itemCount}: **{item}** ({price} 🪙)"
+          - "{description}"
+        Footer:
+          Text: "Página {pageCurrent} de {pageMax}"
+          Icon: ""
+        Author:
+          Text: ""
+          Icon: ""
+        Color: "#1769FF"
+        Image: ""
+        Thumbnail: ""
+      Categories:
+        - "Rangos"
+        - "Boosters"
+        - "Objetos"
+
+# 92134SZG23RMVM
